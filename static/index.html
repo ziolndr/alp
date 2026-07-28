@@ -60,9 +60,10 @@ h1{font-size:clamp(92px,9vw,158px);line-height:.78;letter-spacing:-.085em;margin
 .hero-dek{margin:34px 0 0;max-width:12ch;font-size:clamp(34px,3.3vw,52px);line-height:1.01;letter-spacing:-1.8px;color:#111}
 .hero-footline{margin-top:auto;padding-top:18px;border-top:1px solid var(--line);max-width:520px;font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 
-.hero-field-panel{position:relative;min-width:0;height:100%;background:#080a0d;overflow:hidden}
-#fieldCanvas{position:absolute;inset:0;width:100%;height:100%;display:block}
-.field-caption{position:absolute;left:24px;top:22px;z-index:2;font-family:var(--mono);font-size:9px;line-height:1.5;text-transform:uppercase;color:rgba(255,255,255,.62)}
+.hero-field-panel{position:relative;min-width:0;height:100%;background:#0d1014;overflow:hidden}
+.hero-photo{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;object-position:center center}
+.hero-photo-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,10,13,.18) 0%,rgba(8,10,13,.08) 42%,rgba(8,10,13,.16) 100%), linear-gradient(180deg,rgba(8,10,13,.12) 0%,rgba(8,10,13,.05) 35%,rgba(8,10,13,.22) 100%)}
+.field-caption{position:absolute;left:24px;top:22px;z-index:2;font-family:var(--mono);font-size:9px;line-height:1.5;text-transform:uppercase;color:rgba(255,255,255,.76)}
 .field-caption strong{display:block;color:#fff;font-size:11px;margin-bottom:4px}
 .hero-stats-overlay{position:absolute;right:max(var(--pad),calc((100vw - var(--max))/2 + var(--pad)));bottom:0;width:min(420px,54%);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-left:1px solid var(--line-dark);border-top:1px solid var(--line-dark);z-index:3}
 .stat{min-height:105px;padding:20px 22px;background:transparent;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -255,8 +256,9 @@ body.loading .loader{display:block}
       </div>
 
       <div class="hero-field-panel">
-        <canvas id="fieldCanvas" aria-label="Live source field visualization"></canvas>
-        <div class="field-caption"><strong>LIVE SUPPORT FIELD</strong><span id="fieldCaption">64 registered sources</span></div>
+        <img class="hero-photo" src="/static/hero-support-home.png" alt="Support specialist and adult with a disability sharing a warm moment at home">
+        <div class="hero-photo-overlay" aria-hidden="true"></div>
+        <div class="field-caption"><strong>PERSON-CENTERED SUPPORT</strong><span id="fieldCaption">Supported living · Independent living · Community day services</span></div>
         <div class="hero-stats-overlay" aria-label="Purpose Field statistics">
           <div class="stat"><strong id="statRecords">0</strong><span>Embedded records</span></div>
           <div class="stat"><strong id="statSources">64</strong><span>Official sources</span></div>
@@ -528,62 +530,7 @@ function renderSources(){
 }
 
 function drawField(){
-  const canvas=$('#fieldCanvas');
-  const rect=canvas.getBoundingClientRect();
-  const dpr=Math.min(2,window.devicePixelRatio||1);
-  canvas.width=Math.max(1,Math.floor(rect.width*dpr));
-  canvas.height=Math.max(1,Math.floor(rect.height*dpr));
-  const ctx=canvas.getContext('2d');
-  ctx.scale(dpr,dpr);
-  const w=rect.width,h=rect.height;
-  ctx.clearRect(0,0,w,h);
-  const grad=ctx.createRadialGradient(w*.54,h*.45,20,w*.54,h*.45,Math.max(w,h)*.72);
-  grad.addColorStop(0,'#101b33');grad.addColorStop(.5,'#090c12');grad.addColorStop(1,'#050608');
-  ctx.fillStyle=grad;ctx.fillRect(0,0,w,h);
-
-  const cats=(stats.categories||[]).slice(0,16);
-  const fallback=[
-    {category:'Employment',records:0,sources:8},{category:'Housing',records:0,sources:4},
-    {category:'Transportation',records:0,sources:5},{category:'Self-Determination',records:0,sources:6},
-    {category:'Community Programs',records:0,sources:8},{category:'Benefits & Financial',records:0,sources:9},
-    {category:'Rights & Advocacy',records:0,sources:7},{category:'Recreation & Community',records:0,sources:4}
-  ];
-  const data=cats.length?cats:fallback;
-  const center={x:w*.5,y:h*.43};
-  const nodes=data.map((item,i)=>{
-    const angle=(Math.PI*2*i/data.length)-Math.PI/2;
-    const ring=.28+(i%3)*.105;
-    const x=center.x+Math.cos(angle)*w*ring;
-    const y=center.y+Math.sin(angle)*h*(.23+(i%2)*.11);
-    const weight=Math.max(item.records||0,item.sources||1);
-    const r=5+Math.min(20,Math.sqrt(weight)*1.15);
-    return {...item,x,y,r};
-  });
-  ctx.globalAlpha=.32;
-  nodes.forEach((a,i)=>nodes.slice(i+1).forEach(b=>{
-    const dx=a.x-b.x,dy=a.y-b.y,dist=Math.sqrt(dx*dx+dy*dy);
-    if(dist<Math.min(w,h)*.52){
-      ctx.strokeStyle=(i%4===0)?'#1557ff':'#5e6778';
-      ctx.lineWidth=.5;
-      ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();
-    }
-  }));
-  ctx.globalAlpha=1;
-  ctx.strokeStyle='rgba(255,255,255,.18)';ctx.lineWidth=1;
-  ctx.beginPath();ctx.arc(center.x,center.y,58,0,Math.PI*2);ctx.stroke();
-  ctx.fillStyle='#ff4d00';ctx.beginPath();ctx.arc(center.x,center.y,10,0,Math.PI*2);ctx.fill();
-  nodes.forEach((node,i)=>{
-    ctx.fillStyle=i%5===0?'#ff4d00':(i%3===0?'#1557ff':'#d8dde8');
-    ctx.globalAlpha=.88;ctx.beginPath();ctx.arc(node.x,node.y,node.r,0,Math.PI*2);ctx.fill();
-    ctx.globalAlpha=1;
-    ctx.fillStyle='rgba(255,255,255,.72)';
-    ctx.font='9px Fragment Mono, monospace';
-    const label=node.category.toUpperCase();
-    ctx.fillText(label,node.x+node.r+7,node.y+3);
-  });
-  ctx.fillStyle='rgba(255,255,255,.7)';
-  ctx.font='10px Fragment Mono, monospace';
-  ctx.fillText('A LIVING PURPOSE',center.x+18,center.y+4);
+  return;
 }
 
 async function loadData(){
