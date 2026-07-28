@@ -74,6 +74,40 @@ h1{font-size:clamp(92px,9vw,158px);line-height:.78;letter-spacing:-.085em;margin
 .hero-lower-rule{width:1px;height:72px;background:var(--line-dark);justify-self:center}
 .hero-lower-link{justify-self:start;font-family:var(--mono);font-size:10px;letter-spacing:.04em;text-transform:uppercase;text-underline-offset:5px;color:var(--blue)}
 
+.alp-services{padding:52px var(--pad) 48px;border-bottom:1px solid var(--line);background:#fff}
+.alp-service-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:22px}
+.alp-service-head h2{margin:0;font-size:clamp(42px,6vw,88px);line-height:.82;letter-spacing:-4px;font-weight:600;color:#000}
+.alp-service-head p{margin:0;max-width:48ch;color:#666;font-size:15px;line-height:1.42}
+.alp-service-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:1px solid #000;border-left:1px solid var(--line)}
+.alp-service-card{min-height:294px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:15px;display:flex;flex-direction:column;justify-content:space-between;gap:20px;background:#fff}
+.alp-service-card:hover{background:var(--wash)}
+.alp-service-number{font-family:var(--mono);font-size:9px;color:var(--muted);text-transform:uppercase}
+.alp-service-card h3{margin:14px 0 10px;font-size:24px;line-height:.98;letter-spacing:-.8px;color:#000}
+.alp-service-card p{margin:0;font-size:13px;line-height:1.42;color:#606060}
+.alp-service-actions{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.alp-service-measure{border:0;background:transparent;padding:0;font-family:var(--mono);font-size:8px;text-transform:uppercase;text-decoration:underline;text-underline-offset:4px;text-align:left}
+.alp-service-contact{font-family:var(--mono);font-size:8px;text-transform:uppercase;color:var(--blue);text-underline-offset:4px}
+
+.alp-fit{border-bottom:1px solid #000;background:#f5f4f1;padding:22px 0 24px}
+.alp-fit-head{display:flex;justify-content:space-between;gap:24px;align-items:flex-end;margin-bottom:14px}
+.alp-fit-head h3{margin:0;font-size:30px;line-height:1;letter-spacing:-1px;color:#000}
+.alp-fit-head span{font-family:var(--mono);font-size:9px;text-transform:uppercase;color:var(--muted)}
+.alp-pathway-grid{display:grid;grid-template-columns:1.25fr 1fr 1fr;border-top:1px solid #000;border-left:1px solid var(--line-dark)}
+.alp-pathway{min-height:230px;padding:16px;border-right:1px solid var(--line-dark);border-bottom:1px solid var(--line-dark);background:#fff;display:flex;flex-direction:column;justify-content:space-between;gap:18px}
+.alp-pathway.primary{background:#000;color:#fff}
+.alp-pathway-top{display:flex;justify-content:space-between;gap:15px;font-family:var(--mono);font-size:8px;text-transform:uppercase;color:var(--muted)}
+.alp-pathway.primary .alp-pathway-top{color:#aaa}
+.alp-pathway h4{margin:12px 0 9px;font-size:27px;line-height:.98;letter-spacing:-1px;color:inherit}
+.alp-pathway p{margin:0;font-size:13px;line-height:1.42;color:#606060}
+.alp-pathway.primary p{color:#d0d0d0}
+.alp-signals{margin-top:12px;display:flex;flex-wrap:wrap;gap:5px}
+.alp-signal{font-family:var(--mono);font-size:7px;text-transform:uppercase;border:1px solid var(--line-dark);padding:4px 6px;color:#777}
+.alp-pathway.primary .alp-signal{border-color:#555;color:#ccc}
+.alp-pathway-actions{display:flex;gap:13px;align-items:center;flex-wrap:wrap;font-family:var(--mono);font-size:8px;text-transform:uppercase}
+.alp-pathway-actions a{text-underline-offset:4px}
+.alp-pathway-actions .intake{color:var(--blue)}
+.alp-pathway.primary .alp-pathway-actions .intake{color:#82a7ff}
+
 .mode-strip{padding:0 var(--pad);border-bottom:1px solid var(--line)}
 .mode-row{display:flex;gap:0}
 .mode-btn{appearance:none;border:0;border-right:1px solid var(--line);background:#fff;padding:17px 22px 16px 0;margin-right:22px;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--quiet);position:relative}
@@ -168,6 +202,8 @@ body.loading .loader{display:block}
   .result-row{grid-template-columns:44px 110px minmax(0,1fr) 90px}
   .result-row .desc{display:none}
   .index-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .alp-service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .alp-pathway-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:900px){
   .hero-stage{grid-template-columns:1fr;height:auto;min-height:0}
@@ -206,7 +242,10 @@ body.loading .loader{display:block}
   .title-cell h3{font-size:19px}.score strong{font-size:22px}
   .result-detail{padding:18px;grid-template-columns:1fr}
   .index-grid{grid-template-columns:1fr}
-  .section-head{display:block}.section-head p{margin-top:18px}
+  .section-head,.alp-service-head{display:block}.section-head p,.alp-service-head p{margin-top:18px}
+  .alp-services{padding-left:18px;padding-right:18px}
+  .alp-service-grid,.alp-pathway-grid{grid-template-columns:1fr}
+  .alp-service-card,.alp-pathway{min-height:0}
   .footer{grid-template-columns:1fr;justify-items:start;gap:14px}
   .footer-left,.footer-right{justify-self:start;text-align:left}
 }
@@ -275,6 +314,16 @@ body.loading .loader{display:block}
     </div>
   </section>
 
+  <section class="alp-services" id="alpServices">
+    <div class="shell">
+      <div class="alp-service-head">
+        <h2>How we help.</h2>
+        <p>A Living Purpose already delivers five connected service pathways. The wider field finds the housing, transportation, employment, benefits, recreation, and community resources that complete each person's plan.</p>
+      </div>
+      <div class="alp-service-grid" id="alpServiceGrid"></div>
+    </div>
+  </section>
+
   <section class="mode-strip" id="purposeSurface">
     <div class="shell mode-row">
       <button class="mode-btn active" data-mode="person">Person</button>
@@ -296,7 +345,7 @@ body.loading .loader{display:block}
           <div class="status"><span id="statusText">ready · build the live field or search existing records</span><span id="candidateMeta">64 source registries</span></div>
           <div class="error" id="errorBox"></div>
         </div>
-        <div class="listen-note">One description enters. Programs, benefits, housing, transportation, employment, recreation, rights, provider guidance, and community resources compete in the same embedded response field.</div>
+        <div class="listen-note">One description enters. A Living Purpose’s five owned services are measured first, then programs, benefits, housing, transportation, employment, recreation, rights, and community resources complete the support plan.</div>
       </div>
     </div>
   </section>
@@ -306,6 +355,13 @@ body.loading .loader{display:block}
       <div class="result-topline">
         <div class="result-query" id="resultQuery"></div>
         <div class="result-measure" id="resultMeasure"></div>
+      </div>
+      <div class="alp-fit" id="alpFit">
+        <div class="alp-fit-head">
+          <h3>How A Living Purpose can help</h3>
+          <span>Owned services measured separately from the broader field</span>
+        </div>
+        <div class="alp-pathway-grid" id="alpPathways"></div>
       </div>
       <div class="perspectives" id="perspectives"></div>
       <div class="categories" id="categories"></div>
@@ -369,6 +425,7 @@ let activeCategory='';
 let latestResults=[];
 let stats={categories:[]};
 let sources=[];
+let alpServices=[];
 let sourceCategory='';
 
 const $=s=>document.querySelector(s);
@@ -415,6 +472,56 @@ function renderCategories(facets=[]){
   });
 }
 
+function renderAlpServiceGrid(){
+  const grid=$('#alpServiceGrid');
+  if(!grid)return;
+  grid.innerHTML=alpServices.map((service,index)=>`
+    <article class="alp-service-card">
+      <div>
+        <div class="alp-service-number">${String(index+1).padStart(2,'0')} · A Living Purpose</div>
+        <h3>${esc(service.title)}</h3>
+        <p>${esc(service.summary)}</p>
+      </div>
+      <div class="alp-service-actions">
+        <button class="alp-service-measure" data-service-query="${index}">measure this pathway</button>
+        <a class="alp-service-contact" href="${esc(service.contact_url)}" target="_blank" rel="noopener">request intake ↗</a>
+      </div>
+    </article>
+  `).join('');
+  $$('[data-service-query]').forEach(button=>button.onclick=()=>{
+    const service=alpServices[Number(button.dataset.serviceQuery)];
+    if(!service)return;
+    currentMode='person';
+    currentPerspective='person';
+    activeCategory='';
+    $('#query').value=service.query_prompt;
+    resizeQuery();
+    $('#purposeSurface').scrollIntoView({behavior:'smooth',block:'start'});
+    if(stats.records)runMeasurement(false);
+  });
+}
+
+function renderAlpPathways(pathways=[]){
+  const grid=$('#alpPathways');
+  if(!grid)return;
+  const top=pathways.slice(0,3);
+  grid.innerHTML=top.map((pathway,index)=>`
+    <article class="alp-pathway ${index===0?'primary':''}">
+      <div>
+        <div class="alp-pathway-top"><span>${esc(pathway.fit_label)}</span><span>${Number(pathway.score).toFixed(3)} resonance</span></div>
+        <h4>${esc(pathway.title)}</h4>
+        <p>${esc(pathway.summary)}</p>
+        <div class="alp-signals">${(pathway.matched_signals?.length?pathway.matched_signals:pathway.activities||[]).slice(0,5).map(signal=>`<span class="alp-signal">${esc(signal)}</span>`).join('')}</div>
+      </div>
+      <div class="alp-pathway-actions">
+        <a class="intake" href="${esc(pathway.contact_url)}" target="_blank" rel="noopener">request intake ↗</a>
+        <a href="${esc(pathway.phone_link)}">${esc(pathway.phone)}</a>
+        <a href="${esc(pathway.service_url)}" target="_blank" rel="noopener">service details ↗</a>
+      </div>
+    </article>
+  `).join('');
+}
+
 function renderResults(data){
   latestResults=data.results||[];
   document.body.classList.add('has-results');
@@ -424,6 +531,7 @@ function renderResults(data){
     `${fmt(data.candidate_pages)} source pages<br>`+
     `${data.vector_dimensions}D · ${esc(data.embedding_source)}<br>`+
     `perspective · ${esc(PERSPECTIVES[currentPerspective])}`;
+  renderAlpPathways(data.alp_pathways||[]);
   renderCategories(data.facets||[]);
   const list=$('#resultList');
   if(!latestResults.length){
@@ -535,10 +643,12 @@ function drawField(){
 
 async function loadData(){
   try{
-    const [statsRes,sourcesRes]=await Promise.all([fetch('/api/stats'),fetch('/api/sources')]);
+    const [statsRes,sourcesRes,servicesRes]=await Promise.all([fetch('/api/stats'),fetch('/api/sources'),fetch('/api/alp-services')]);
     stats=await statsRes.json();
     const sourcePayload=await sourcesRes.json();
+    const servicePayload=await servicesRes.json();
     sources=sourcePayload.sources||[];
+    alpServices=servicePayload.services||[];
     $('#statRecords').textContent=fmt(stats.records);
     $('#statSources').textContent=fmt(stats.sources);
     $('#statCategories').textContent=fmt(stats.category_count);
@@ -550,6 +660,7 @@ async function loadData(){
       :(stats.records?'ready · live embedded field loaded':'ready · press build field to crawl and embed sources');
     $('#buildBtn').textContent=stats.build?.running?'Building…':(stats.records?'Rebuild field':'Build field');
     $('#buildBtn').disabled=!!stats.build?.running;
+    renderAlpServiceGrid();
     renderSources();
     drawField();
   }catch(err){

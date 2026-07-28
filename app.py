@@ -34,7 +34,7 @@ DB_PATH = Path(os.getenv("PURPOSE_FIELD_DB", str(DATA_DIR / "purpose_field.sqlit
 SOURCE_MANIFEST = Path(os.getenv("PURPOSE_FIELD_SOURCES", str(DATA_DIR / "sources.json")))
 CUSTOM_SOURCE_MANIFEST = DATA_DIR / "custom_sources.json"
 
-PRODUCT_VERSION = "1.0.1"
+PRODUCT_VERSION = "1.1.0"
 PRODUCT_ARCHITECTURE = "ecosystem-field"
 
 ARBITER_EMBED_URL = os.getenv(
@@ -97,6 +97,279 @@ PERSPECTIVE_PREFIXES = {
         "program coverage, and durable operational value. "
     ),
 }
+
+ALP_CONTACT_URL = "https://livingpurposeils.org/contact/"
+ALP_SERVICES_URL = "https://livingpurposeils.org/services/"
+ALP_PHONE_DISPLAY = "(858) 285-5126"
+ALP_PHONE_LINK = "tel:+18582855126"
+
+ALP_SERVICES = [
+    {
+        "id": "supported-living",
+        "title": "Supported Living",
+        "category": "Supported Living",
+        "summary": "Individualized support for adults who choose and maintain a home of their own.",
+        "description": (
+            "A Living Purpose supports adults in finding, modifying, and maintaining a home of their choice; "
+            "building natural circles of support; practicing advocacy and self-advocacy; arranging emergency response; "
+            "securing adaptive equipment; coordinating personal-care workers; and participating in community life."
+        ),
+        "best_for": [
+            "living in a chosen home or apartment",
+            "ongoing individualized support",
+            "personal-care and IHSS coordination",
+            "emergency and backup planning",
+            "natural supports and community participation",
+        ],
+        "activities": ["housing", "circles of support", "advocacy", "adaptive equipment", "emergency response"],
+        "signals": [
+            "apartment", "home", "housing", "roommate", "rent", "move out", "live alone", "supported living",
+            "personal care", "IHSS", "care attendant", "emergency", "backup support", "adaptive equipment",
+            "natural supports", "daily living", "maintain a home",
+        ],
+        "query_prompt": (
+            "Find the strongest supported-living pathway for an adult who wants a home of their choice, "
+            "individualized daily support, personal-care coordination, emergency planning, natural supports, "
+            "self-advocacy, and meaningful participation in the community."
+        ),
+    },
+    {
+        "id": "independent-living",
+        "title": "Independent Living",
+        "category": "Independent Living",
+        "summary": "Practical skill-building that increases choice, control, safety, and independence.",
+        "description": (
+            "A Living Purpose provides individualized instruction and support in financial management, self-advocacy, "
+            "personal care, community resources, mobility, parenting, household and community safety, menu planning, "
+            "and health awareness."
+        ),
+        "best_for": [
+            "learning daily-living skills",
+            "budgeting and financial management",
+            "meal and menu planning",
+            "mobility and transportation training",
+            "parenting, safety, health, and self-advocacy",
+        ],
+        "activities": ["budgeting", "menu planning", "mobility", "household safety", "health awareness"],
+        "signals": [
+            "budget", "money", "banking", "financial management", "groceries", "meal", "menu", "cooking",
+            "bus", "trolley", "transportation", "mobility", "travel training", "parenting", "household safety",
+            "community safety", "health awareness", "personal care", "self advocacy", "independent living",
+            "daily living skills",
+        ],
+        "query_prompt": (
+            "Find independent-living supports for an adult building skills in budgeting, meal planning, mobility, "
+            "household safety, personal care, health awareness, parenting, community access, and self-advocacy."
+        ),
+    },
+    {
+        "id": "community-day",
+        "title": "Community Day Services",
+        "category": "Community Day Services",
+        "summary": "A fully community-based day program for connection, participation, and practical growth.",
+        "description": (
+            "Participants engage in real local settings where they can form relationships, practice life skills, "
+            "explore interests, contribute to their communities, and strengthen social, recreational, and vocational skills."
+        ),
+        "best_for": [
+            "a meaningful weekly community routine",
+            "social connection and belonging",
+            "recreation and community participation",
+            "volunteer and vocational exposure",
+            "hands-on life-skill development",
+        ],
+        "activities": ["community participation", "social connection", "recreation", "volunteering", "vocational skills"],
+        "signals": [
+            "day program", "community day", "weekly activity", "friends", "social", "belonging", "recreation",
+            "community participation", "volunteer", "vocational", "local activities", "life skills", "get out",
+            "meaningful day", "community integration",
+        ],
+        "query_prompt": (
+            "Find community-based day services and local activities that build relationships, belonging, recreation, "
+            "life skills, volunteering, vocational exposure, and meaningful participation for an adult with disabilities."
+        ),
+    },
+    {
+        "id": "tailored-day",
+        "title": "Tailored Day Services",
+        "category": "Tailored Day Services",
+        "summary": "A flexible one-person-at-a-time pathway built around individual goals and interests.",
+        "description": (
+            "A Living Purpose creates individualized community schedules around each participant's aspirations, including "
+            "work experience, social development, education, hobbies, community contribution, and greater independence."
+        ),
+        "best_for": [
+            "an individualized schedule instead of a traditional day program",
+            "work experience and employment exploration",
+            "education, hobbies, and personal interests",
+            "one-to-one community skill development",
+            "specific social or independence goals",
+        ],
+        "activities": ["custom schedule", "work experience", "employment exploration", "hobbies", "one-to-one support"],
+        "signals": [
+            "tailored day", "individual schedule", "customized", "one to one", "work experience", "job exploration",
+            "employment", "career", "education", "class", "hobby", "interest", "social skills", "community contribution",
+            "flexible schedule", "personal goals",
+        ],
+        "query_prompt": (
+            "Build a tailored-day pathway around one adult's exact interests, schedule, work goals, education, hobbies, "
+            "social development, community contribution, and independence rather than placing them in a generic program."
+        ),
+    },
+    {
+        "id": "self-determination",
+        "title": "Self-Determination Services",
+        "category": "Self-Determination Services",
+        "summary": "Support for using an individual budget to choose services that advance the person's IPP goals.",
+        "description": (
+            "A Living Purpose helps participants and families understand their spending budget, connect choices to "
+            "Individual Program Plan objectives, coordinate selected supports, and exercise greater freedom, control, "
+            "responsibility, and authority over how services are arranged."
+        ),
+        "best_for": [
+            "using a Self-Determination budget",
+            "connecting spending to IPP goals",
+            "finding chosen providers and supports",
+            "coordinating FMS, planning, and generic resources",
+            "increasing participant and family control",
+        ],
+        "activities": ["individual budget", "spending plan", "IPP goals", "provider choice", "service coordination"],
+        "signals": [
+            "self determination", "SDP", "individual budget", "spending plan", "IPP", "FMS", "financial management service",
+            "independent facilitator", "provider choice", "purchase services", "budget utilization", "freedom", "control",
+            "person centered plan", "generic resources",
+        ],
+        "query_prompt": (
+            "Find a Self-Determination pathway that connects an individual budget and spending plan to IPP goals, "
+            "provider choice, FMS coordination, generic resources, and the participant's control over services."
+        ),
+    },
+]
+
+
+def public_alp_services() -> list[dict[str, Any]]:
+    return [
+        {
+            **service,
+            "service_url": ALP_SERVICES_URL,
+            "contact_url": ALP_CONTACT_URL,
+            "phone": ALP_PHONE_DISPLAY,
+            "phone_link": ALP_PHONE_LINK,
+        }
+        for service in ALP_SERVICES
+    ]
+
+
+def alp_service_profile_text(service: dict[str, Any]) -> str:
+    return compact_space(
+        f"A Living Purpose owned service pathway. Service: {service['title']}. "
+        f"Category: {service['category']}. {service['summary']} {service['description']} "
+        f"Best for: {'; '.join(service['best_for'])}. "
+        f"Activities and capabilities: {', '.join(service['activities'])}. "
+        f"Matching signals: {', '.join(service['signals'])}. "
+        "Organization: A Living Purpose. Location: San Diego, California. "
+        "The service is individualized, person-centered, community-based, and designed for adults with intellectual "
+        "and developmental disabilities while protecting choice, dignity, control, and meaningful participation."
+    )
+
+
+def query_signal_matches(query: str, signals: list[str]) -> list[str]:
+    lowered = compact_space(query).lower()
+    matches = [signal for signal in signals if signal.lower() in lowered]
+    return matches[:6]
+
+
+def rank_alp_pathways(query_vector: list[float], query: str) -> tuple[list[dict[str, Any]], str]:
+    profile_texts = [alp_service_profile_text(service) for service in ALP_SERVICES]
+    vectors, source = EMBEDDER.embed_many(profile_texts)
+    pathways: list[dict[str, Any]] = []
+    for service, vector in zip(ALP_SERVICES, vectors):
+        pathways.append(
+            {
+                **service,
+                "score": round(dot(query_vector, vector), 6),
+                "matched_signals": query_signal_matches(query, service["signals"]),
+                "service_url": ALP_SERVICES_URL,
+                "contact_url": ALP_CONTACT_URL,
+                "phone": ALP_PHONE_DISPLAY,
+                "phone_link": ALP_PHONE_LINK,
+            }
+        )
+    pathways.sort(key=lambda item: (-item["score"], item["title"]))
+    for index, pathway in enumerate(pathways):
+        pathway["fit_label"] = "Primary ALP pathway" if index == 0 else ("Additional ALP pathway" if index < 3 else "Explore pathway")
+        pathway["rank"] = index + 1
+    return pathways, source
+
+
+def seed_alp_service_records() -> dict[str, Any]:
+    """Guarantee that ALP's five owned services exist as first-class field records."""
+    source_id = "alp-services"
+    with db() as connection:
+        source = connection.execute("SELECT id FROM sources WHERE id = ?", (source_id,)).fetchone()
+    if not source:
+        sync_sources()
+        with db() as connection:
+            source = connection.execute("SELECT id FROM sources WHERE id = ?", (source_id,)).fetchone()
+    if not source:
+        raise ApiError(500, "The A Living Purpose services source is not registered.")
+
+    texts = [alp_service_profile_text(service) for service in ALP_SERVICES]
+    vectors, embedding_source = EMBEDDER.embed_many(texts)
+    now = utc_now()
+    with _DB_LOCK, db() as connection:
+        connection.execute(
+            "DELETE FROM records WHERE source_id = ? AND record_type = 'alp-service-pathway'",
+            (source_id,),
+        )
+        for service, text, vector in zip(ALP_SERVICES, texts, vectors):
+            content_hash = hashlib.sha256(text.encode("utf-8")).hexdigest()
+            connection.execute(
+                """
+                INSERT INTO records(
+                    id, source_id, category, record_type, title, organization, url,
+                    text, tags_json, vector_json, content_hash, embedding_source, fetched_at
+                )
+                VALUES (?, ?, ?, 'alp-service-pathway', ?, 'A Living Purpose', ?, ?, ?, ?, ?, ?, ?)
+                ON CONFLICT(id) DO UPDATE SET
+                    category=excluded.category,
+                    title=excluded.title,
+                    organization=excluded.organization,
+                    url=excluded.url,
+                    text=excluded.text,
+                    tags_json=excluded.tags_json,
+                    vector_json=excluded.vector_json,
+                    content_hash=excluded.content_hash,
+                    embedding_source=excluded.embedding_source,
+                    fetched_at=excluded.fetched_at
+                """,
+                (
+                    f"alp-service:{service['id']}",
+                    source_id,
+                    service["category"],
+                    service["title"],
+                    ALP_SERVICES_URL,
+                    text,
+                    json.dumps(service["signals"] + service["activities"], ensure_ascii=False),
+                    json.dumps(vector),
+                    content_hash,
+                    embedding_source,
+                    now,
+                ),
+            )
+        total = connection.execute(
+            "SELECT COUNT(*) AS n FROM records WHERE source_id = ?", (source_id,)
+        ).fetchone()["n"]
+        connection.execute(
+            """
+            UPDATE sources
+            SET status='ready', record_count=?, last_built_at=?, last_error=NULL, updated_at=?
+            WHERE id=?
+            """,
+            (total, now, now, source_id),
+        )
+    return {"records": len(ALP_SERVICES), "embedding_source": embedding_source}
+
 
 
 class ApiError(Exception):
@@ -938,6 +1211,12 @@ def build_field(
                 failed.append({"source_id": source["id"], "error": detail})
                 print(f"  FAILED · {detail}", flush=True)
 
+        alp_seed = seed_alp_service_records()
+        print(
+            f"ALP SERVICE PATHWAYS · {alp_seed['records']} records · {alp_seed['embedding_source']}",
+            flush=True,
+        )
+
         with db() as connection:
             record_count = connection.execute("SELECT COUNT(*) AS n FROM records").fetchone()["n"]
             category_count = connection.execute("SELECT COUNT(DISTINCT category) AS n FROM records").fetchone()["n"]
@@ -1006,6 +1285,7 @@ def search_field(
     full_query = MODE_PREFIXES[mode] + PERSPECTIVE_PREFIXES[perspective] + query
     vectors, embedding_source = EMBEDDER.embed_many([full_query])
     query_vector = vectors[0]
+    alp_pathways, alp_embedding_source = rank_alp_pathways(query_vector, query)
 
     params: list[Any] = []
     sql = """
@@ -1030,9 +1310,10 @@ def search_field(
             scored.append((dot(query_vector, vector), row))
 
     scored.sort(key=lambda item: (-item[0], item[1]["organization"].lower(), item[1]["title"].lower()))
-    grouped: dict[tuple[str, str], dict[str, Any]] = {}
+    grouped: dict[tuple[str, str, str], dict[str, Any]] = {}
     for score, row in scored:
-        key = (row["source_id"], row["url"])
+        record_identity = row["id"] if row["record_type"] == "alp-service-pathway" else ""
+        key = (row["source_id"], row["url"], record_identity)
         if key not in grouped:
             grouped[key] = {
                 "id": row["id"],
@@ -1072,6 +1353,8 @@ def search_field(
         "candidate_records": len(scored),
         "candidate_pages": len(grouped),
         "elapsed_ms": round((time.perf_counter() - started) * 1000, 2),
+        "alp_pathways": alp_pathways,
+        "alp_embedding_source": alp_embedding_source,
         "results": results,
         "facets": [{"category": key, "count": value} for key, value in sorted(facets.items())],
     }
@@ -1291,6 +1574,9 @@ class Handler(BaseHTTPRequestHandler):
             if path == "/api/sources":
                 self.send_json(200, {"ok": True, "sources": list_sources()})
                 return
+            if path == "/api/alp-services":
+                self.send_json(200, {"ok": True, "services": public_alp_services()})
+                return
             if path == "/api/build/status":
                 self.send_json(200, {"ok": True, "build": get_state("build", {"running": False})})
                 return
@@ -1405,6 +1691,11 @@ def verify() -> int:
         perspective="person",
         limit=5,
     )
+    pathways = result.get("alp_pathways", [])
+    if len(pathways) != len(ALP_SERVICES):
+        print(f"ALP pathways        FAIL · expected {len(ALP_SERVICES)}, received {len(pathways)}")
+        return 1
+    print(f"ALP pathways        PASS · {len(pathways)} owned services · primary {pathways[0]['title']}")
     print(f"search              PASS · {len(result['results'])} results")
     for index, item in enumerate(result["results"][:5], 1):
         print(f"  {index:02d} {item['score']:.3f} · {item['category']} · {item['organization']} · {item['title']}")

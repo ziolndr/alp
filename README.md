@@ -8,7 +8,12 @@ A person, goal, plan, or agency question is embedded through:
 https://api.arbiter.traut.ai/public/embed
 ```
 
-The query vector is measured against a local field built from real official-source content.
+The query vector is measured twice:
+
+1. Against A Living Purpose's five owned service pathways.
+2. Against the wider local field built from real official-source content.
+
+This keeps the ecosystem broad while making every relevant search capable of becoming an A Living Purpose intake, coordinated plan, or referral relationship.
 
 ## What the field contains
 
@@ -59,7 +64,7 @@ That command:
 
 ## Faster first look
 
-This creates a 64-record source-level field without crawling all source pages:
+This creates a source-level field for all 64 registries plus the five canonical A Living Purpose service pathways without crawling all source pages:
 
 ```bash
 ./scripts/START_BACKGROUND.command
@@ -86,9 +91,39 @@ The front end keeps the useful interaction model from LISTEN:
 - Expandable official-source evidence
 - A live ecosystem index
 - Real corpus and source counts
-- A field visualization driven by actual category counts
+- A real human-centered supported-living hero image
+- A dedicated A Living Purpose service-pathway section
+- A separate "How A Living Purpose can help" measurement above broader results
+- Intake, call, and official-service actions on every ALP pathway
 
 There is no patient selector. Any person or situation can be described directly.
+
+## A Living Purpose service spine
+
+The application treats these as first-class owned services rather than ordinary directory entries:
+
+- Supported Living
+- Independent Living
+- Community Day Services
+- Tailored Day Services
+- Self-Determination Services
+
+Each full build guarantees five canonical `alp-service-pathway` records even when the public website is temporarily unavailable or its page structure changes. Search responses return `alp_pathways` separately from the wider ecosystem results, so paid ALP services are never lost inside the directory while external resources remain ranked by semantic fit.
+
+### List the owned service pathways
+
+```bash
+curl -s http://127.0.0.1:8844/api/alp-services | python3 -m json.tool
+```
+
+### Search response structure
+
+`POST /api/search` now returns:
+
+- `alp_pathways` — all five ALP services ranked against the person or goal
+- `results` — the broader program, benefit, housing, transportation, employment, recreation, rights, and provider field
+- `facets` — category counts for the broader field
+
 
 ## Commands
 
