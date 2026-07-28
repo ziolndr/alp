@@ -64,7 +64,7 @@ That command:
 
 ## Faster first look
 
-This creates a source-level field for all 64 registries plus the five canonical A Living Purpose service pathways without crawling all source pages:
+This creates a source-level field for all 67 registries plus the five canonical A Living Purpose service pathways without crawling all source pages:
 
 ```bash
 ./scripts/START_BACKGROUND.command
@@ -243,7 +243,7 @@ The current launcher now:
 
 - reclaims port 8844 before startup;
 - verifies the running service reports `architecture: ecosystem-field`;
-- verifies the complete 64-source registry;
+- verifies the complete 67-source registry;
 - fails immediately if the new process exits; and
 - runs a direct SQLite/ARBITER verification before the HTTP search test.
 
@@ -255,3 +255,16 @@ chmod +x PUSH_TO_GITHUB.command
 ```
 
 The configured remote is `https://github.com/ziolndr/alp.git`. Runtime databases, logs, `.env`, caches, and local custom-source state are excluded from Git.
+
+
+## Crisis and emergency safety layer
+
+Purpose Field includes a non-ranked safety layer for queries that may indicate suicide or self-harm:
+
+- Call or text 988
+- 988 online chat
+- San Diego Access & Crisis Line: 1-888-724-7240
+- San Diego Mobile Crisis Response Teams, requested through 988 or the Access & Crisis Line
+- 911 for immediate danger, threats of violence, or a medical emergency
+
+The emergency panel is available even when the semantic field has not been built or ARBITER is unavailable. Crisis resources are pinned and never scored, diagnosed, filtered, or delayed by ARBITER.

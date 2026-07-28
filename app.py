@@ -34,7 +34,7 @@ DB_PATH = Path(os.getenv("PURPOSE_FIELD_DB", str(DATA_DIR / "purpose_field.sqlit
 SOURCE_MANIFEST = Path(os.getenv("PURPOSE_FIELD_SOURCES", str(DATA_DIR / "sources.json")))
 CUSTOM_SOURCE_MANIFEST = DATA_DIR / "custom_sources.json"
 
-PRODUCT_VERSION = "1.1.0"
+PRODUCT_VERSION = "1.2.0"
 PRODUCT_ARCHITECTURE = "ecosystem-field"
 
 ARBITER_EMBED_URL = os.getenv(
@@ -102,6 +102,80 @@ ALP_CONTACT_URL = "https://livingpurposeils.org/contact/"
 ALP_SERVICES_URL = "https://livingpurposeils.org/services/"
 ALP_PHONE_DISPLAY = "(858) 285-5126"
 ALP_PHONE_LINK = "tel:+18582855126"
+
+CRISIS_RESOURCES = {
+    "title": "Immediate crisis support",
+    "summary": (
+        "Purpose Field and A Living Purpose are not emergency services. "
+        "For immediate danger or a medical emergency, call 911. "
+        "For suicidal crisis, emotional distress, or a behavioral-health crisis, call or text 988."
+    ),
+    "national": {
+        "name": "988 Suicide & Crisis Lifeline",
+        "description": (
+            "Free crisis counseling and support for anyone in suicidal crisis or emotional distress "
+            "in the United States and its territories."
+        ),
+        "phone": "988",
+        "phone_link": "tel:988",
+        "sms": "988",
+        "sms_link": "sms:988",
+        "chat_url": "https://988lifeline.org/chat/",
+        "website": "https://988lifeline.org/",
+    },
+    "local": {
+        "name": "San Diego Access & Crisis Line",
+        "description": (
+            "A free, confidential, 24/7 local crisis line connecting people to behavioral-health support, "
+            "suicide-prevention services, substance-use referrals, and Mobile Crisis Response Teams."
+        ),
+        "phone": "1-888-724-7240",
+        "phone_link": "tel:+18887247240",
+        "website": "https://www.sandiegocounty.gov/content/sdc/hhsa/programs/bhs/ACL.html",
+    },
+    "mobile_crisis": {
+        "name": "San Diego Mobile Crisis Response Team",
+        "description": (
+            "A non-law-enforcement behavioral-health team available 24/7 throughout San Diego County. "
+            "Request MCRT through 988 or the Access & Crisis Line. MCRT is not for medical emergencies "
+            "or situations involving threats of violence."
+        ),
+        "website": "https://www.sandiegocounty.gov/mcrt/",
+    },
+    "emergency": {
+        "name": "Emergency services",
+        "description": "For immediate danger, threats of violence, or a medical emergency, call 911.",
+        "phone": "911",
+        "phone_link": "tel:911",
+    },
+}
+
+CRISIS_PHRASES = [
+    "suicide", "suicidal", "kill myself", "kill himself", "kill herself", "kill themselves",
+    "end my life", "end his life", "end her life", "end their life", "want to die", "wants to die",
+    "wish i was dead", "better off dead", "not worth living", "can't go on", "cannot go on",
+    "hurt myself", "hurt himself", "hurt herself", "hurt themselves", "self harm", "self-harm",
+    "cut myself", "cutting myself", "overdose on purpose", "take my own life", "taking my own life",
+    "no reason to live", "planning to die", "plan to die", "goodbye forever",
+]
+
+
+def detect_crisis_language(query: str) -> dict[str, Any]:
+    lowered = compact_space(query).lower()
+    matched = [phrase for phrase in CRISIS_PHRASES if phrase in lowered]
+    return {"detected": bool(matched), "matched_signals": matched[:8]}
+
+
+def public_crisis_resources(query: str = "") -> dict[str, Any]:
+    detection = detect_crisis_language(query)
+    return {
+        **CRISIS_RESOURCES,
+        **detection,
+        "ranking_policy": (
+            "Crisis resources are pinned safety information. They are never ranked by ARBITER and do not depend "
+            "on the embedded field being built or available."
+        ),
+    }
 
 ALP_SERVICES = [
     {
@@ -1286,6 +1360,7 @@ def search_field(
     vectors, embedding_source = EMBEDDER.embed_many([full_query])
     query_vector = vectors[0]
     alp_pathways, alp_embedding_source = rank_alp_pathways(query_vector, query)
+    crisis_support = public_crisis_resources(query)
 
     params: list[Any] = []
     sql = """
@@ -1353,6 +1428,8 @@ def search_field(
         "candidate_records": len(scored),
         "candidate_pages": len(grouped),
         "elapsed_ms": round((time.perf_counter() - started) * 1000, 2),
+        "crisis_detected": crisis_support["detected"],
+        "crisis_support": crisis_support,
         "alp_pathways": alp_pathways,
         "alp_embedding_source": alp_embedding_source,
         "results": results,
@@ -1576,6 +1653,9 @@ class Handler(BaseHTTPRequestHandler):
                 return
             if path == "/api/alp-services":
                 self.send_json(200, {"ok": True, "services": public_alp_services()})
+                return
+            if path == "/api/crisis-resources":
+                self.send_json(200, {"ok": True, "crisis_support": public_crisis_resources()})
                 return
             if path == "/api/build/status":
                 self.send_json(200, {"ok": True, "build": get_state("build", {"running": False})})

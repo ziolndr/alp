@@ -1,6 +1,6 @@
 # A Living Purpose — Registered Source Field
 
-**64 official-source roots across 18 support domains.**
+**67 official-source roots across 18 support domains, including pinned suicide and behavioral-health crisis resources.**
 
 A full build crawls these roots and relevant same-domain pages, then embeds each extracted section through ARBITER.
 

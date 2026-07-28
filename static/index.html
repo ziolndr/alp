@@ -74,6 +74,32 @@ h1{font-size:clamp(92px,9vw,158px);line-height:.78;letter-spacing:-.085em;margin
 .hero-lower-rule{width:1px;height:72px;background:var(--line-dark);justify-self:center}
 .hero-lower-link{justify-self:start;font-family:var(--mono);font-size:10px;letter-spacing:.04em;text-transform:uppercase;text-underline-offset:5px;color:var(--blue)}
 
+.crisis-access{border-bottom:1px solid #000;background:#fff4ef}
+.crisis-access-inner{min-height:72px;padding:13px var(--pad);display:flex;align-items:center;justify-content:space-between;gap:22px}
+.crisis-access-copy{display:flex;align-items:center;gap:12px;min-width:0}
+.crisis-access-mark{width:10px;height:10px;background:var(--signal);flex:0 0 auto}
+.crisis-access-copy strong{display:block;font-size:16px;line-height:1;color:#000}
+.crisis-access-copy span{display:block;margin-top:5px;font-family:var(--mono);font-size:8px;line-height:1.45;text-transform:uppercase;color:#6d554d}
+.crisis-access-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.crisis-action{border:1px solid #000;background:#fff;color:#000;padding:9px 11px;font-family:var(--mono);font-size:9px;text-transform:uppercase;text-decoration:none;white-space:nowrap}
+.crisis-action.primary{background:#000;color:#fff}
+.crisis-action.emergency{border-color:#a4241b;color:#a4241b}
+.crisis-action:hover{background:var(--signal);border-color:var(--signal);color:#fff}
+
+.crisis-result{display:none;border:3px solid var(--signal);background:#fff7f3;padding:22px;margin:0 0 22px}
+.crisis-result.show{display:block}
+.crisis-result-top{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:start}
+.crisis-result-label{font-family:var(--mono);font-size:9px;text-transform:uppercase;color:#9d2d18;letter-spacing:.05em}
+.crisis-result h3{margin:9px 0 10px;font-size:clamp(30px,4vw,56px);line-height:.9;letter-spacing:-2.3px;color:#000}
+.crisis-result p{margin:0;max-width:72ch;font-size:15px;line-height:1.45;color:#4b3b36}
+.crisis-result-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.crisis-result-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid #000;border-left:1px solid var(--line-dark);margin-top:20px}
+.crisis-resource{padding:14px;border-right:1px solid var(--line-dark);border-bottom:1px solid var(--line-dark);background:#fff}
+.crisis-resource strong{display:block;font-size:17px;color:#000}
+.crisis-resource p{margin:8px 0 0;font-size:12px;line-height:1.42;color:#666}
+.crisis-resource a{display:inline-block;margin-top:12px;font-family:var(--mono);font-size:8px;text-transform:uppercase;text-underline-offset:4px;color:var(--blue)}
+.crisis-policy{margin-top:13px;font-family:var(--mono);font-size:8px;line-height:1.5;text-transform:uppercase;color:#8b6c62}
+
 .alp-services{padding:52px var(--pad) 48px;border-bottom:1px solid var(--line);background:#fff}
 .alp-service-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:22px}
 .alp-service-head h2{margin:0;font-size:clamp(42px,6vw,88px);line-height:.82;letter-spacing:-4px;font-weight:600;color:#000}
@@ -206,6 +232,10 @@ body.loading .loader{display:block}
   .alp-pathway-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:900px){
+  .crisis-access-inner{align-items:flex-start;flex-direction:column}
+  .crisis-access-actions{justify-content:flex-start}
+  .crisis-result-top{grid-template-columns:1fr}
+  .crisis-result-grid{grid-template-columns:1fr}
   .hero-stage{grid-template-columns:1fr;height:auto;min-height:0}
   .hero-copy-panel{padding:44px var(--pad) 40px;min-height:470px}
   .hero-field-panel{height:520px}
@@ -270,6 +300,7 @@ body.loading .loader{display:block}
       <span class="signal-dot"></span>
       <span id="navStatus">field registered</span>
       <span class="endpoint">ARBITER 72D</span>
+      <a class="build-btn" href="#crisisHelp">Need help now</a>
       <button class="build-btn" id="buildBtn" type="button">Build field</button>
     </div>
   </div>
@@ -300,7 +331,7 @@ body.loading .loader{display:block}
         <div class="field-caption"><strong>PERSON-CENTERED SUPPORT</strong><span id="fieldCaption">Supported living · Independent living · Community day services</span></div>
         <div class="hero-stats-overlay" aria-label="Purpose Field statistics">
           <div class="stat"><strong id="statRecords">0</strong><span>Embedded records</span></div>
-          <div class="stat"><strong id="statSources">64</strong><span>Official sources</span></div>
+          <div class="stat"><strong id="statSources">67</strong><span>Official sources</span></div>
           <div class="stat"><strong id="statCategories">0</strong><span>Support domains</span></div>
           <div class="stat"><strong>72D</strong><span>ARBITER measurement</span></div>
         </div>
@@ -311,6 +342,22 @@ body.loading .loader{display:block}
       <div class="hero-lower-copy">Stop searching directories one program at a time.<br>Measure the full support field.</div>
       <div class="hero-lower-rule"></div>
       <a class="hero-lower-link" href="#purposeSurface">Enter the field ↓</a>
+    </div>
+  </section>
+
+  <section class="crisis-access" id="crisisHelp" aria-label="Immediate crisis support">
+    <div class="shell crisis-access-inner">
+      <div class="crisis-access-copy">
+        <span class="crisis-access-mark" aria-hidden="true"></span>
+        <div><strong>Need help now?</strong><span>Suicidal crisis or emotional distress · support is available now</span></div>
+      </div>
+      <div class="crisis-access-actions">
+        <a class="crisis-action primary" href="tel:988">Call 988</a>
+        <a class="crisis-action" href="sms:988">Text 988</a>
+        <a class="crisis-action" href="https://988lifeline.org/chat/" target="_blank" rel="noopener">Chat with 988 ↗</a>
+        <a class="crisis-action" href="tel:+18887247240">San Diego crisis line</a>
+        <a class="crisis-action emergency" href="tel:911">Immediate danger · 911</a>
+      </div>
     </div>
   </section>
 
@@ -342,7 +389,7 @@ body.loading .loader{display:block}
             <button class="go" id="go" type="button" aria-label="Measure">→</button>
           </div>
           <div class="examples" id="examples"></div>
-          <div class="status"><span id="statusText">ready · build the live field or search existing records</span><span id="candidateMeta">64 source registries</span></div>
+          <div class="status"><span id="statusText">ready · build the live field or search existing records</span><span id="candidateMeta">67 source registries</span></div>
           <div class="error" id="errorBox"></div>
         </div>
         <div class="listen-note">One description enters. A Living Purpose’s five owned services are measured first, then programs, benefits, housing, transportation, employment, recreation, rights, and community resources complete the support plan.</div>
@@ -356,6 +403,23 @@ body.loading .loader{display:block}
         <div class="result-query" id="resultQuery"></div>
         <div class="result-measure" id="resultMeasure"></div>
       </div>
+      <section class="crisis-result" id="crisisResult" aria-live="assertive" aria-label="Immediate crisis support">
+        <div class="crisis-result-top">
+          <div>
+            <div class="crisis-result-label">Immediate safety support · not an ARBITER ranking</div>
+            <h3>Do not wait for search results.</h3>
+            <p id="crisisSummary">For suicidal crisis or emotional distress, call or text 988. For immediate danger or a medical emergency, call 911.</p>
+            <div class="crisis-result-actions">
+              <a class="crisis-action primary" href="tel:988">Call 988</a>
+              <a class="crisis-action" href="sms:988">Text 988</a>
+              <a class="crisis-action" href="https://988lifeline.org/chat/" target="_blank" rel="noopener">Chat with 988 ↗</a>
+              <a class="crisis-action emergency" href="tel:911">Call 911</a>
+            </div>
+          </div>
+        </div>
+        <div class="crisis-result-grid" id="crisisResourceGrid"></div>
+        <div class="crisis-policy" id="crisisPolicy">Crisis resources are pinned safety information and are never ranked by ARBITER.</div>
+      </section>
       <div class="alp-fit" id="alpFit">
         <div class="alp-fit-head">
           <h3>How A Living Purpose can help</h3>
@@ -426,6 +490,7 @@ let latestResults=[];
 let stats={categories:[]};
 let sources=[];
 let alpServices=[];
+let crisisSupport=null;
 let sourceCategory='';
 
 const $=s=>document.querySelector(s);
@@ -522,10 +587,37 @@ function renderAlpPathways(pathways=[]){
   `).join('');
 }
 
+const CRISIS_SIGNAL_RE=/(suicid|kill\s+(myself|himself|herself|themselves)|end\s+(my|his|her|their)\s+life|want(s)?\s+to\s+die|wish\s+i\s+was\s+dead|better\s+off\s+dead|not\s+worth\s+living|can(?:not|'t)\s+go\s+on|hurt\s+(myself|himself|herself|themselves)|self[- ]harm|cut(ting)?\s+myself|overdose\s+on\s+purpose|take\s+my\s+own\s+life|no\s+reason\s+to\s+live|plan(ning)?\s+to\s+die)/i;
+
+function queryMayBeCrisis(value){
+  return CRISIS_SIGNAL_RE.test(String(value||''));
+}
+
+function renderCrisisSupport(support,force=false){
+  const panel=$('#crisisResult');
+  if(!panel)return;
+  const show=!!force || !!support?.detected;
+  panel.classList.toggle('show',show);
+  if(!show)return;
+  const current=support||crisisSupport||{};
+  $('#crisisSummary').textContent=current.summary||'For suicidal crisis or emotional distress, call or text 988. For immediate danger or a medical emergency, call 911.';
+  $('#crisisPolicy').textContent=current.ranking_policy||'Crisis resources are pinned safety information and are never ranked by ARBITER.';
+  const resources=[current.national,current.local,current.mobile_crisis].filter(Boolean);
+  $('#crisisResourceGrid').innerHTML=resources.map(resource=>`
+    <article class="crisis-resource">
+      <strong>${esc(resource.name)}</strong>
+      <p>${esc(resource.description)}</p>
+      ${resource.phone_link?`<a href="${esc(resource.phone_link)}">${esc(resource.phone)}</a>`:''}
+      ${resource.website?`<a href="${esc(resource.website)}" target="_blank" rel="noopener">official information ↗</a>`:''}
+    </article>
+  `).join('');
+}
+
 function renderResults(data){
   latestResults=data.results||[];
   document.body.classList.add('has-results');
   $('#resultQuery').textContent=currentQuery;
+  renderCrisisSupport(data.crisis_support,data.crisis_detected);
   $('#resultMeasure').innerHTML=
     `${fmt(data.candidate_records)} embedded records<br>`+
     `${fmt(data.candidate_pages)} source pages<br>`+
@@ -571,6 +663,16 @@ function renderResults(data){
 async function runMeasurement(reuse=false){
   const q=(reuse?currentQuery:$('#query').value).trim();
   if(!q)return;
+  const crisisDetected=queryMayBeCrisis(q);
+  if(crisisDetected){
+    document.body.classList.add('has-results');
+    currentQuery=q;
+    $('#resultQuery').textContent=q;
+    renderCrisisSupport(crisisSupport,true);
+    $('#results').scrollIntoView({behavior:'smooth',block:'start'});
+  }else{
+    renderCrisisSupport(crisisSupport,false);
+  }
   if(!stats.records){
     showError('The source registry is loaded, but no embedded records exist yet. Press BUILD FIELD first. The build crawls and embeds the registered official sources.');
     return;
@@ -643,12 +745,14 @@ function drawField(){
 
 async function loadData(){
   try{
-    const [statsRes,sourcesRes,servicesRes]=await Promise.all([fetch('/api/stats'),fetch('/api/sources'),fetch('/api/alp-services')]);
+    const [statsRes,sourcesRes,servicesRes,crisisRes]=await Promise.all([fetch('/api/stats'),fetch('/api/sources'),fetch('/api/alp-services'),fetch('/api/crisis-resources')]);
     stats=await statsRes.json();
     const sourcePayload=await sourcesRes.json();
     const servicePayload=await servicesRes.json();
+    const crisisPayload=await crisisRes.json();
     sources=sourcePayload.sources||[];
     alpServices=servicePayload.services||[];
+    crisisSupport=crisisPayload.crisis_support||null;
     $('#statRecords').textContent=fmt(stats.records);
     $('#statSources').textContent=fmt(stats.sources);
     $('#statCategories').textContent=fmt(stats.category_count);
@@ -720,7 +824,13 @@ $$('.mode-btn').forEach(btn=>btn.onclick=()=>{
 });
 $('#go').onclick=()=>runMeasurement(false);
 $('#buildBtn').onclick=buildField;
-$('#query').addEventListener('input',resizeQuery);
+$('#query').addEventListener('input',()=>{
+  resizeQuery();
+  if(queryMayBeCrisis($('#query').value)){
+    document.body.classList.add('has-results');
+    renderCrisisSupport(crisisSupport,true);
+  }
+});
 $('#query').addEventListener('keydown',event=>{
   if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();runMeasurement(false)}
 });

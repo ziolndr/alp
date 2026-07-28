@@ -30,7 +30,7 @@
       "organization": "A Living Purpose",
       "category": "Agency Services",
       "url": "https://livingpurposeils.org/about/",
-      "description": "The agency\u2019s mission, philosophy, and person-centered approach to helping adults with intellectual and developmental disabilities develop skills and find purpose.",
+      "description": "The agency’s mission, philosophy, and person-centered approach to helping adults with intellectual and developmental disabilities develop skills and find purpose.",
       "tags": [
         "mission",
         "person-centered",
@@ -276,7 +276,7 @@
       "organization": "California Department of Developmental Services",
       "category": "Regional Center",
       "url": "https://www.dds.ca.gov/general/eligibility/support-services/",
-      "description": "State overview of independent living, self-determination, work services, and other supports available through California\u2019s developmental services system.",
+      "description": "State overview of independent living, self-determination, work services, and other supports available through California’s developmental services system.",
       "tags": [
         "support services",
         "work services",
@@ -1314,6 +1314,74 @@
         "resources",
         "alerts",
         "disaster"
+      ]
+    },
+    {
+      "id": "988-lifeline",
+      "title": "988 Suicide & Crisis Lifeline",
+      "organization": "988 Suicide & Crisis Lifeline",
+      "category": "Safety & Emergency",
+      "url": "https://988lifeline.org/",
+      "description": "National call, text, and chat crisis support for people in suicidal crisis or emotional distress.",
+      "tags": [
+        "988",
+        "suicide prevention",
+        "crisis counseling",
+        "emotional distress",
+        "chat"
+      ],
+      "max_pages": 8,
+      "include": [
+        "get-help",
+        "help-yourself",
+        "help-someone-else",
+        "chat",
+        "faq"
+      ]
+    },
+    {
+      "id": "sd-county-crisis-services",
+      "title": "San Diego County Crisis Services",
+      "organization": "County of San Diego Behavioral Health Services",
+      "category": "Safety & Emergency",
+      "url": "https://www.sandiegocounty.gov/content/sdc/hhsa/programs/bhs/crisis_services.html",
+      "description": "Local 24/7 behavioral-health crisis support, urgent walk-in options, crisis stabilization, and emergency guidance.",
+      "tags": [
+        "crisis services",
+        "988",
+        "Access and Crisis Line",
+        "walk-in",
+        "behavioral health"
+      ],
+      "max_pages": 8,
+      "include": [
+        "crisis",
+        "get_help_now",
+        "ACL",
+        "suicide_prevention",
+        "services"
+      ]
+    },
+    {
+      "id": "sd-county-mcrt",
+      "title": "Mobile Crisis Response Teams",
+      "organization": "County of San Diego Behavioral Health Services",
+      "category": "Safety & Emergency",
+      "url": "https://www.sandiegocounty.gov/mcrt/",
+      "description": "Non-law-enforcement mobile behavioral-health crisis teams available 24/7 throughout San Diego County through 988 or the Access and Crisis Line.",
+      "tags": [
+        "mobile crisis",
+        "MCRT",
+        "de-escalation",
+        "mental health",
+        "substance use",
+        "San Diego"
+      ],
+      "max_pages": 6,
+      "include": [
+        "mcrt",
+        "mobile-crisis",
+        "crisis"
       ]
     }
   ]

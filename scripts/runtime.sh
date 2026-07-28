@@ -75,7 +75,7 @@ if data.get("architecture") != "ecosystem-field":
 if not str(data.get("version") or "").startswith("1."):
     print(f"wrong Purpose Field version: {data.get('version')!r}", file=sys.stderr)
     raise SystemExit(1)
-if int(data.get("sources") or 0) < 64:
+if int(data.get("sources") or 0) < 67:
     print(f"source registry incomplete: {data.get('sources')!r}", file=sys.stderr)
     raise SystemExit(1)
 PY_HEALTH
