@@ -19,7 +19,7 @@ fi
 
 git add -A
 if ! git diff --cached --quiet; then
-  git commit -m "Anchor Purpose Field around A Living Purpose services"
+  git commit -m "Anchor Purpose Field around Geneva services"
 else
   echo "No new local changes to commit."
 fi

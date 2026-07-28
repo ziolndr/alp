@@ -1,4 +1,4 @@
-# A Living Purpose — Registered Source Field
+# Geneva — Registered Source Field
 
 **67 official-source roots across 18 support domains, including pinned suicide and behavioral-health crisis resources.**
 
@@ -6,10 +6,10 @@ A full build crawls these roots and relevant same-domain pages, then embeds each
 
 ## Agency Services — 2 sources
 
-- **A Living Purpose Services** — A Living Purpose
+- **Geneva Services** — Geneva
   - Supported living, independent living, community day, tailored day, and self-determination services centered on individualized goals, community participation, and independence.
   - `https://livingpurposeils.org/services/`
-- **A Living Purpose Mission and Approach** — A Living Purpose
+- **Geneva Mission and Approach** — Geneva
   - The agency’s mission, philosophy, and person-centered approach to helping adults with intellectual and developmental disabilities develop skills and find purpose.
   - `https://livingpurposeils.org/about/`
 
@@ -246,6 +246,6 @@ A full build crawls these roots and relevant same-domain pages, then embeds each
 
 ## Workforce — 1 sources
 
-- **A Living Purpose Support Specialist Employment** — A Living Purpose
+- **Geneva Support Specialist Employment** — Geneva
   - Support specialist role, requirements, and the practical skills staff help people build through one-to-one services in homes and communities.
   - `https://livingpurposeils.org/employment/`

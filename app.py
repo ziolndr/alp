@@ -75,7 +75,7 @@ MODE_PREFIXES = {
         "specific actions, referrals, measurements, and next steps without replacing human judgment. "
     ),
     "agency": (
-        "From A Living Purpose's operational perspective, identify relevant programs, partners, regulations, "
+        "From Geneva's operational perspective, identify relevant programs, partners, regulations, "
         "funding pathways, provider resources, workforce tools, and community opportunities. "
     ),
 }
@@ -106,7 +106,7 @@ ALP_PHONE_LINK = "tel:+18582855126"
 CRISIS_RESOURCES = {
     "title": "Immediate crisis support",
     "summary": (
-        "Purpose Field and A Living Purpose are not emergency services. "
+        "Purpose Field and Geneva are not emergency services. "
         "For immediate danger or a medical emergency, call 911. "
         "For suicidal crisis, emotional distress, or a behavioral-health crisis, call or text 988."
     ),
@@ -184,7 +184,7 @@ ALP_SERVICES = [
         "category": "Supported Living",
         "summary": "Individualized support for adults who choose and maintain a home of their own.",
         "description": (
-            "A Living Purpose supports adults in finding, modifying, and maintaining a home of their choice; "
+            "Geneva supports adults in finding, modifying, and maintaining a home of their choice; "
             "building natural circles of support; practicing advocacy and self-advocacy; arranging emergency response; "
             "securing adaptive equipment; coordinating personal-care workers; and participating in community life."
         ),
@@ -213,7 +213,7 @@ ALP_SERVICES = [
         "category": "Independent Living",
         "summary": "Practical skill-building that increases choice, control, safety, and independence.",
         "description": (
-            "A Living Purpose provides individualized instruction and support in financial management, self-advocacy, "
+            "Geneva provides individualized instruction and support in financial management, self-advocacy, "
             "personal care, community resources, mobility, parenting, household and community safety, menu planning, "
             "and health awareness."
         ),
@@ -269,7 +269,7 @@ ALP_SERVICES = [
         "category": "Tailored Day Services",
         "summary": "A flexible one-person-at-a-time pathway built around individual goals and interests.",
         "description": (
-            "A Living Purpose creates individualized community schedules around each participant's aspirations, including "
+            "Geneva creates individualized community schedules around each participant's aspirations, including "
             "work experience, social development, education, hobbies, community contribution, and greater independence."
         ),
         "best_for": [
@@ -296,7 +296,7 @@ ALP_SERVICES = [
         "category": "Self-Determination Services",
         "summary": "Support for using an individual budget to choose services that advance the person's IPP goals.",
         "description": (
-            "A Living Purpose helps participants and families understand their spending budget, connect choices to "
+            "Geneva helps participants and families understand their spending budget, connect choices to "
             "Individual Program Plan objectives, coordinate selected supports, and exercise greater freedom, control, "
             "responsibility, and authority over how services are arranged."
         ),
@@ -336,12 +336,12 @@ def public_alp_services() -> list[dict[str, Any]]:
 
 def alp_service_profile_text(service: dict[str, Any]) -> str:
     return compact_space(
-        f"A Living Purpose owned service pathway. Service: {service['title']}. "
+        f"Geneva owned service pathway. Service: {service['title']}. "
         f"Category: {service['category']}. {service['summary']} {service['description']} "
         f"Best for: {'; '.join(service['best_for'])}. "
         f"Activities and capabilities: {', '.join(service['activities'])}. "
         f"Matching signals: {', '.join(service['signals'])}. "
-        "Organization: A Living Purpose. Location: San Diego, California. "
+        "Organization: Geneva. Location: San Diego, California. "
         "The service is individualized, person-centered, community-based, and designed for adults with intellectual "
         "and developmental disabilities while protecting choice, dignity, control, and meaningful participation."
     )
@@ -386,7 +386,7 @@ def seed_alp_service_records() -> dict[str, Any]:
         with db() as connection:
             source = connection.execute("SELECT id FROM sources WHERE id = ?", (source_id,)).fetchone()
     if not source:
-        raise ApiError(500, "The A Living Purpose services source is not registered.")
+        raise ApiError(500, "The Geneva services source is not registered.")
 
     texts = [alp_service_profile_text(service) for service in ALP_SERVICES]
     vectors, embedding_source = EMBEDDER.embed_many(texts)
@@ -404,7 +404,7 @@ def seed_alp_service_records() -> dict[str, Any]:
                     id, source_id, category, record_type, title, organization, url,
                     text, tags_json, vector_json, content_hash, embedding_source, fetched_at
                 )
-                VALUES (?, ?, ?, 'alp-service-pathway', ?, 'A Living Purpose', ?, ?, ?, ?, ?, ?, ?)
+                VALUES (?, ?, ?, 'alp-service-pathway', ?, 'Geneva', ?, ?, ?, ?, ?, ?, ?)
                 ON CONFLICT(id) DO UPDATE SET
                     category=excluded.category,
                     title=excluded.title,
@@ -932,7 +932,7 @@ def fetch_url(url: str) -> tuple[str, bytes, str]:
     request = urllib.request.Request(
         url,
         headers={
-            "User-Agent": "Mozilla/5.0 (compatible; A Living Purpose Purpose Field/1.0; +https://livingpurposeils.org/)",
+            "User-Agent": "Mozilla/5.0 (compatible; Geneva Purpose Field/1.0; +https://livingpurposeils.org/)",
             "Accept": "text/html,application/xhtml+xml,text/plain;q=0.9,*/*;q=0.2",
             "Accept-Encoding": "gzip",
         },
@@ -1473,7 +1473,7 @@ def field_stats() -> dict[str, Any]:
         ]
     return {
         "ok": True,
-        "service": "A Living Purpose — Purpose Field",
+        "service": "Geneva — Purpose Field",
         "version": PRODUCT_VERSION,
         "architecture": PRODUCT_ARCHITECTURE,
         "database": str(DB_PATH),
@@ -1783,7 +1783,7 @@ def verify() -> int:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="A Living Purpose ARBITER Purpose Field")
+    parser = argparse.ArgumentParser(description="Geneva ARBITER Purpose Field")
     subparsers = parser.add_subparsers(dest="command")
 
     subparsers.add_parser("serve")

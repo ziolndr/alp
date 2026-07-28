@@ -1,4 +1,4 @@
-# A Living Purpose — ARBITER Purpose Field
+# Geneva — ARBITER Purpose Field
 
 This is the full field architecture, not a one-person demonstration and not a browser-side array of hard-coded candidates.
 
@@ -10,16 +10,16 @@ https://api.arbiter.traut.ai/public/embed
 
 The query vector is measured twice:
 
-1. Against A Living Purpose's five owned service pathways.
+1. Against Geneva's five owned service pathways.
 2. Against the wider local field built from real official-source content.
 
-This keeps the ecosystem broad while making every relevant search capable of becoming an A Living Purpose intake, coordinated plan, or referral relationship.
+This keeps the ecosystem broad while making every relevant search capable of becoming an Geneva intake, coordinated plan, or referral relationship.
 
 ## What the field contains
 
 The default source registry contains 64 high-value sources across:
 
-- A Living Purpose's own service model
+- Geneva's own service model
 - San Diego Regional Center services, provider operations, resources, and Self-Determination
 - California DDS supported living, independent living, Self-Determination, advocacy, and provider guidance
 - Employment and supported employment
@@ -64,7 +64,7 @@ That command:
 
 ## Faster first look
 
-This creates a source-level field for all 67 registries plus the five canonical A Living Purpose service pathways without crawling all source pages:
+This creates a source-level field for all 67 registries plus the five canonical Geneva service pathways without crawling all source pages:
 
 ```bash
 ./scripts/START_BACKGROUND.command
@@ -92,13 +92,13 @@ The front end keeps the useful interaction model from LISTEN:
 - A live ecosystem index
 - Real corpus and source counts
 - A real human-centered supported-living hero image
-- A dedicated A Living Purpose service-pathway section
-- A separate "How A Living Purpose can help" measurement above broader results
+- A dedicated Geneva service-pathway section
+- A separate "How Geneva can help" measurement above broader results
 - Intake, call, and official-service actions on every ALP pathway
 
 There is no patient selector. Any person or situation can be described directly.
 
-## A Living Purpose service spine
+## Geneva service spine
 
 The application treats these as first-class owned services rather than ordinary directory entries:
 

@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#0d231e">
-<title>A Living Purpose — Purpose Field</title>
-<meta name="description" content="A person-centered service and community-resource field powered by ARBITER.">
+<title>Geneva — Purpose Field</title>
+<meta name="description" content="Geneva is a person-centered service and community-resource field powered by ARBITER.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -116,7 +116,7 @@ img{max-width:100%;display:block}
 .hero-footline{margin-top:56px;padding-top:22px;border-top:1px solid var(--edge-dark);font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(245,241,230,.5)}
 .hero-visual{position:relative;padding-bottom:64px}
 .arch-frame{margin:0;position:relative;border-radius:260px 260px 30px 30px;overflow:hidden;border:1px solid var(--edge-dark);aspect-ratio:4/4.7;background:#0a1c17}
-.arch-frame img{width:100%;height:100%;object-fit:cover;object-position:center center}
+.arch-frame img{width:100%;height:100%;object-fit:cover}
 .photo-chip{position:absolute;left:16px;bottom:16px;right:16px;background:rgba(13,35,30,.78);backdrop-filter:blur(8px);border:1px solid var(--edge-dark);border-radius:var(--r-md);padding:12px 16px;font-family:var(--mono);font-size:10px;line-height:1.6;letter-spacing:.06em;text-transform:uppercase;color:rgba(245,241,230,.75)}
 .photo-chip strong{display:block;color:var(--bone);font-size:11px;margin-bottom:2px}
 .stat-card{position:absolute;left:-56px;bottom:0;width:min(420px,92%);background:var(--card);color:var(--ink);border-radius:var(--r-lg);padding:8px;display:grid;grid-template-columns:1fr 1fr;box-shadow:0 30px 70px -30px rgba(0,0,0,.55)}
@@ -301,11 +301,26 @@ body.loading .loader{display:block}
 }
 @media(max-width:640px){
   :root{--pad:18px}
-  .nav-inner{height:68px}
+  .nav-inner{height:auto;align-items:flex-start;flex-direction:column;gap:12px;padding-top:12px;padding-bottom:12px}
   .nav-status{display:none}
+  .brand{width:100%}
   .brand-name strong{font-size:18px}
+  .nav-meta{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .pill{justify-content:center}
+  .crisis-nav,.build-btn{width:100%;min-height:50px;padding:12px 14px;font-size:13px;white-space:nowrap}
+  .crisis-access-copy strong{font-size:18px}
+  .crisis-access-copy span{font-size:8.5px}
+  .crisis-access-actions{display:grid;grid-template-columns:1fr 1fr;justify-content:stretch;width:100%}
+  .crisis-action{justify-content:center;padding:12px 10px;font-size:9px;white-space:normal;text-align:center;min-height:44px}
+  .crisis-action.emergency,.crisis-action[href="tel:+18887247240"]{grid-column:1 / -1}
+  .hero-grid{padding-top:42px;padding-bottom:56px;gap:32px}
   .hero h1{font-size:clamp(36px,10vw,48px)}
   .hero-dek{font-size:16px}
+  .hero-actions{gap:14px}
+  .cta{width:100%;justify-content:center}
+  .ghost-link{display:inline-block}
+  .arch-frame{aspect-ratio:4/4.95}
+  .photo-chip{left:12px;right:12px;bottom:12px;padding:10px 12px}
   .stat-card{grid-template-columns:1fr 1fr}
   .stat{padding:14px 16px}
   .stat strong{font-size:26px}
@@ -338,7 +353,7 @@ body.loading .loader{display:block}
 <body>
 <div class="loader" id="loader" aria-hidden="true">
   <div class="loader-inner">
-    <div class="loader-top"><span>A Living Purpose / ARBITER</span><span id="loaderMeta">Measuring the field</span></div>
+    <div class="loader-top"><span>Geneva / ARBITER</span><span id="loaderMeta">Measuring the field</span></div>
     <div class="loader-query" id="loaderQuery">Finding what fits.</div>
     <div class="loader-bar"><span></span></div>
   </div>
@@ -346,9 +361,9 @@ body.loading .loader{display:block}
 
 <header class="nav">
   <div class="shell nav-inner">
-    <a class="brand" href="#top" aria-label="A Living Purpose home">
+    <a class="brand" href="#top" aria-label="Geneva home">
       <span class="arch-mark on-light" aria-hidden="true"><i></i><i></i><i></i></span>
-      <span class="brand-name"><strong>A Living Purpose</strong><span>Purpose Field</span></span>
+      <span class="brand-name"><strong>Geneva</strong><span>Purpose Field</span></span>
     </a>
     <div class="nav-meta">
       <span class="nav-status"><span class="dot" aria-hidden="true"></span><span id="navStatus">field registered</span></span>
@@ -414,7 +429,7 @@ body.loading .loader{display:block}
           <span class="eyebrow">Our services</span>
           <h2>How we help.</h2>
         </div>
-        <p>A Living Purpose already delivers five connected service pathways. The wider field finds the housing, transportation, employment, benefits, recreation, and community resources that complete each person's plan.</p>
+        <p>Geneva delivers five connected service pathways. The wider field finds the housing, transportation, employment, benefits, recreation, and community resources that complete each person's plan.</p>
       </div>
       <div class="service-grid" id="alpServiceGrid"></div>
     </div>
@@ -444,7 +459,7 @@ body.loading .loader{display:block}
           <div class="status"><span id="statusText">ready · build the live field or search existing records</span><span id="candidateMeta">67 source registries</span></div>
           <div class="error" id="errorBox" role="alert"></div>
         </div>
-        <p class="ask-note">A Living Purpose's five owned services are measured first. Then programs, benefits, housing, transportation, employment, recreation, rights, and community resources complete the plan.</p>
+        <p class="ask-note">Geneva's five owned services are measured first. Then programs, benefits, housing, transportation, employment, recreation, rights, and community resources complete the plan.</p>
       </div>
     </div>
   </section>
@@ -480,7 +495,7 @@ body.loading .loader{display:block}
 
       <div class="alp-fit" id="alpFit">
         <div class="alp-fit-head">
-          <h3>Where A Living Purpose fits</h3>
+          <h3>Where Geneva fits</h3>
           <span>Our services, measured separately from the wider field</span>
         </div>
         <div class="alp-pathway-grid" id="alpPathways"></div>
@@ -516,7 +531,7 @@ body.loading .loader{display:block}
 
 <footer class="footer">
   <div class="shell footer-inner">
-    <div class="footer-left">A Living Purpose · person-centered service intelligence</div>
+    <div class="footer-left">Geneva · person-centered service intelligence</div>
     <span class="arch-mark" aria-label="ARBITER symbol"><i></i><i></i><i></i></span>
     <div class="footer-right">Actual General Intelligence, Inc. · ARBITER coherence engine</div>
   </div>
@@ -537,7 +552,7 @@ const MODES={
     'Create a coordinated next-step plan for housing, IHSS, transportation, budgeting, social recreation, and supported employment.'
   ],
   agency:[
-    'Where should A Living Purpose build partnerships so support specialists can connect people to employment, housing, benefits, transportation, recreation, and self-advocacy resources faster?',
+    'Where should Geneva build partnerships so support specialists can connect people to employment, housing, benefits, transportation, recreation, and self-advocacy resources faster?',
     'What current provider guidance, vendorization changes, self-determination resources, workforce supports, and community programs should agency leadership act on?'
   ]
 };

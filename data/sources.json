@@ -2,8 +2,8 @@
   "sources": [
     {
       "id": "alp-services",
-      "title": "A Living Purpose Services",
-      "organization": "A Living Purpose",
+      "title": "Geneva Services",
+      "organization": "Geneva",
       "category": "Agency Services",
       "url": "https://livingpurposeils.org/services/",
       "description": "Supported living, independent living, community day, tailored day, and self-determination services centered on individualized goals, community participation, and independence.",
@@ -26,8 +26,8 @@
     },
     {
       "id": "alp-about",
-      "title": "A Living Purpose Mission and Approach",
-      "organization": "A Living Purpose",
+      "title": "Geneva Mission and Approach",
+      "organization": "Geneva",
       "category": "Agency Services",
       "url": "https://livingpurposeils.org/about/",
       "description": "The agency’s mission, philosophy, and person-centered approach to helping adults with intellectual and developmental disabilities develop skills and find purpose.",
@@ -45,8 +45,8 @@
     },
     {
       "id": "alp-employment",
-      "title": "A Living Purpose Support Specialist Employment",
-      "organization": "A Living Purpose",
+      "title": "Geneva Support Specialist Employment",
+      "organization": "Geneva",
       "category": "Workforce",
       "url": "https://livingpurposeils.org/employment/",
       "description": "Support specialist role, requirements, and the practical skills staff help people build through one-to-one services in homes and communities.",

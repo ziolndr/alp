@@ -1,5 +1,5 @@
 #!/bin/bash
-# Shared runtime functions for A Living Purpose Purpose Field.
+# Shared runtime functions for Geneva Purpose Field.
 # shellcheck shell=bash
 
 alp_load_env() {
@@ -66,7 +66,7 @@ except Exception as exc:
     print(f"invalid health response: {exc}", file=sys.stderr)
     raise SystemExit(1)
 
-if data.get("service") != "A Living Purpose — Purpose Field":
+if data.get("service") != "Geneva — Purpose Field":
     print(f"wrong service on port: {data.get('service')!r}", file=sys.stderr)
     raise SystemExit(1)
 if data.get("architecture") != "ecosystem-field":
