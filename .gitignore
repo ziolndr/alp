@@ -1,0 +1,9 @@
+# Runtime data
+.env
+data/purpose_field.sqlite3
+data/purpose_field.sqlite3-*
+data/custom_sources.json
+logs/
+__pycache__/
+*.pyc
+.DS_Store

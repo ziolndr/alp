@@ -1,0 +1,1320 @@
+{
+  "sources": [
+    {
+      "id": "alp-services",
+      "title": "A Living Purpose Services",
+      "organization": "A Living Purpose",
+      "category": "Agency Services",
+      "url": "https://livingpurposeils.org/services/",
+      "description": "Supported living, independent living, community day, tailored day, and self-determination services centered on individualized goals, community participation, and independence.",
+      "tags": [
+        "supported living",
+        "independent living",
+        "community day",
+        "tailored day",
+        "self-determination",
+        "San Diego"
+      ],
+      "max_pages": 5,
+      "include": [
+        "services",
+        "about",
+        "director",
+        "employment",
+        "contact"
+      ]
+    },
+    {
+      "id": "alp-about",
+      "title": "A Living Purpose Mission and Approach",
+      "organization": "A Living Purpose",
+      "category": "Agency Services",
+      "url": "https://livingpurposeils.org/about/",
+      "description": "The agency\u2019s mission, philosophy, and person-centered approach to helping adults with intellectual and developmental disabilities develop skills and find purpose.",
+      "tags": [
+        "mission",
+        "person-centered",
+        "independence",
+        "purpose"
+      ],
+      "max_pages": 2,
+      "include": [
+        "about",
+        "services"
+      ]
+    },
+    {
+      "id": "alp-employment",
+      "title": "A Living Purpose Support Specialist Employment",
+      "organization": "A Living Purpose",
+      "category": "Workforce",
+      "url": "https://livingpurposeils.org/employment/",
+      "description": "Support specialist role, requirements, and the practical skills staff help people build through one-to-one services in homes and communities.",
+      "tags": [
+        "support specialist",
+        "direct support",
+        "ISP goals",
+        "workforce"
+      ],
+      "max_pages": 2,
+      "include": [
+        "employment",
+        "services"
+      ]
+    },
+    {
+      "id": "sdrc-adults",
+      "title": "Services for Adults",
+      "organization": "San Diego Regional Center",
+      "category": "Regional Center",
+      "url": "https://www.sdrc.org/services/services-for-adults",
+      "description": "Person-centered adult services, IPP planning, independent living, supported living, day programs, employment, respite, and transportation for San Diego and Imperial County residents.",
+      "tags": [
+        "IPP",
+        "adult services",
+        "regional center",
+        "person-centered planning"
+      ],
+      "max_pages": 6,
+      "include": [
+        "services",
+        "adults",
+        "employment",
+        "living",
+        "transportation"
+      ]
+    },
+    {
+      "id": "sdrc-services",
+      "title": "Regional Center Services and Service Coordination",
+      "organization": "San Diego Regional Center",
+      "category": "Regional Center",
+      "url": "https://www.sdrc.org/services/index.html",
+      "description": "Service coordination, annual IPP planning, advocacy, referrals, and purchased services for eligible people with developmental disabilities.",
+      "tags": [
+        "service coordination",
+        "IPP",
+        "advocacy",
+        "referrals"
+      ],
+      "max_pages": 6,
+      "include": [
+        "services",
+        "clinical",
+        "coordination",
+        "living",
+        "employment"
+      ]
+    },
+    {
+      "id": "sdrc-resources",
+      "title": "Community Resources",
+      "organization": "San Diego Regional Center",
+      "category": "Community Resources",
+      "url": "https://www.sdrc.org/resource",
+      "description": "Local advocacy, self-advocacy, family support, disability, education, employment, and community resources serving San Diego and Imperial Counties.",
+      "tags": [
+        "resources",
+        "self-advocacy",
+        "family support",
+        "People First"
+      ],
+      "max_pages": 8,
+      "include": [
+        "resource",
+        "advocacy",
+        "employment",
+        "housing",
+        "transportation"
+      ]
+    },
+    {
+      "id": "sdrc-sdp",
+      "title": "Self-Determination Program",
+      "organization": "San Diego Regional Center",
+      "category": "Self-Determination",
+      "url": "https://www.sdrc.org/sdp",
+      "description": "Local Self-Determination Program orientation, person-centered planning, individual budget, spending plan, FMS selection, and enrollment pathway.",
+      "tags": [
+        "SDP",
+        "individual budget",
+        "spending plan",
+        "FMS",
+        "orientation"
+      ],
+      "max_pages": 8,
+      "include": [
+        "sdp",
+        "self",
+        "determination",
+        "orientation",
+        "fms"
+      ]
+    },
+    {
+      "id": "sdrc-providers",
+      "title": "Service Provider Resources",
+      "organization": "San Diego Regional Center",
+      "category": "Provider Operations",
+      "url": "https://www.sdrc.org/providers",
+      "description": "Provider development, requests for proposals, participant-directed services, FMS, supported living, day services, and community resource development.",
+      "tags": [
+        "providers",
+        "vendorization",
+        "RFP",
+        "FMS",
+        "service development"
+      ],
+      "max_pages": 8,
+      "include": [
+        "provider",
+        "vendor",
+        "rfp",
+        "service"
+      ]
+    },
+    {
+      "id": "sdrc-provider-forms",
+      "title": "Provider Forms and Vendorization",
+      "organization": "San Diego Regional Center",
+      "category": "Provider Operations",
+      "url": "https://www.sdrc.org/providerforms",
+      "description": "Vendorization procedures, service categories, resource coordinator contacts, forms, and Provider Directory rollout information.",
+      "tags": [
+        "vendorization",
+        "forms",
+        "Provider Directory",
+        "service codes"
+      ],
+      "max_pages": 5,
+      "include": [
+        "provider",
+        "forms",
+        "vendor"
+      ]
+    },
+    {
+      "id": "sdrc-apply",
+      "title": "Apply for Regional Center Services",
+      "organization": "San Diego Regional Center",
+      "category": "Regional Center",
+      "url": "https://www.sdrc.org/apply",
+      "description": "Eligibility intake, application steps, assessment, IPP development, and contact pathways for San Diego and Imperial Counties.",
+      "tags": [
+        "eligibility",
+        "intake",
+        "application",
+        "IPP"
+      ],
+      "max_pages": 3,
+      "include": [
+        "apply",
+        "intake",
+        "eligibility"
+      ]
+    },
+    {
+      "id": "dds-ils-sls",
+      "title": "Independent Living Skills and Supported Living Services",
+      "organization": "California Department of Developmental Services",
+      "category": "Supported & Independent Living",
+      "url": "https://www.dds.ca.gov/individuals-and-families/independent-living-skills-supported-living-services/",
+      "description": "State definitions and practical areas covered by ILS and SLS, including money management, meal preparation, housing, attendants, emergencies, and community participation.",
+      "tags": [
+        "ILS",
+        "SLS",
+        "money management",
+        "housing",
+        "community life"
+      ],
+      "max_pages": 4,
+      "include": [
+        "independent-living",
+        "supported-living"
+      ]
+    },
+    {
+      "id": "dds-sls",
+      "title": "Supported Living Services",
+      "organization": "California Department of Developmental Services",
+      "category": "Supported & Independent Living",
+      "url": "https://www.dds.ca.gov/services/supported-living-services/",
+      "description": "Supported Living Services principles, scope, regulations, choice and control, housing, financial affairs, and long-range personal goals.",
+      "tags": [
+        "SLS",
+        "Title 17",
+        "Lanterman Act",
+        "choice and control"
+      ],
+      "max_pages": 5,
+      "include": [
+        "supported-living",
+        "living-services"
+      ]
+    },
+    {
+      "id": "dds-ilp",
+      "title": "Independent Living Program",
+      "organization": "California Department of Developmental Services",
+      "category": "Supported & Independent Living",
+      "url": "https://www.dds.ca.gov/general/eligibility/living-arrangements/independent-living-program/",
+      "description": "Independent living skills training and supports for adults living in non-licensed homes or apartments.",
+      "tags": [
+        "independent living",
+        "skills training",
+        "community living"
+      ],
+      "max_pages": 4,
+      "include": [
+        "independent-living",
+        "living-arrangements"
+      ]
+    },
+    {
+      "id": "dds-support-services",
+      "title": "Support Services",
+      "organization": "California Department of Developmental Services",
+      "category": "Regional Center",
+      "url": "https://www.dds.ca.gov/general/eligibility/support-services/",
+      "description": "State overview of independent living, self-determination, work services, and other supports available through California\u2019s developmental services system.",
+      "tags": [
+        "support services",
+        "work services",
+        "SDP",
+        "ILS"
+      ],
+      "max_pages": 7,
+      "include": [
+        "support-services",
+        "work",
+        "self-determination",
+        "independent"
+      ]
+    },
+    {
+      "id": "dds-sdp",
+      "title": "Self-Determination Program",
+      "organization": "California Department of Developmental Services",
+      "category": "Self-Determination",
+      "url": "https://www.dds.ca.gov/initiatives/sdp/",
+      "description": "Statewide Self-Determination Program resources supporting freedom, control, responsibility, and individualized purchasing of services and supports.",
+      "tags": [
+        "SDP",
+        "freedom",
+        "control",
+        "individual budget"
+      ],
+      "max_pages": 8,
+      "include": [
+        "sdp",
+        "self-determination"
+      ]
+    },
+    {
+      "id": "dds-sdp-faq",
+      "title": "Self-Determination Program FAQ",
+      "organization": "California Department of Developmental Services",
+      "category": "Self-Determination",
+      "url": "https://www.dds.ca.gov/initiatives/sdp/frequently-asked-questions/",
+      "description": "Current answers about orientation, eligibility, enrollment, budgets, spending plans, FMS, services, and participant responsibilities.",
+      "tags": [
+        "SDP FAQ",
+        "orientation",
+        "budget",
+        "FMS"
+      ],
+      "max_pages": 5,
+      "include": [
+        "sdp",
+        "frequently-asked"
+      ]
+    },
+    {
+      "id": "dds-advocacy",
+      "title": "Advocacy Information",
+      "organization": "California Department of Developmental Services",
+      "category": "Rights & Advocacy",
+      "url": "https://www.dds.ca.gov/individuals-and-families/advocacy-information/",
+      "description": "Independent advocacy organizations and resources that help people understand and exercise developmental disability rights.",
+      "tags": [
+        "advocacy",
+        "rights",
+        "People First",
+        "Disability Rights California"
+      ],
+      "max_pages": 5,
+      "include": [
+        "advocacy"
+      ]
+    },
+    {
+      "id": "dds-emergency",
+      "title": "Emergency Preparedness for Providers",
+      "organization": "California Department of Developmental Services",
+      "category": "Safety & Emergency",
+      "url": "https://www.dds.ca.gov/rc/vendor-provider/emergency-preparedness-provider/",
+      "description": "Emergency planning resources for developmental service providers and the people they support.",
+      "tags": [
+        "emergency preparedness",
+        "provider",
+        "disaster",
+        "high heat"
+      ],
+      "max_pages": 5,
+      "include": [
+        "emergency",
+        "preparedness",
+        "ready"
+      ]
+    },
+    {
+      "id": "scdd-regional-center",
+      "title": "Regional Center Services Guidance",
+      "organization": "California State Council on Developmental Disabilities",
+      "category": "Rights & Advocacy",
+      "url": "https://scdd.ca.gov/regionalcenterservices/",
+      "description": "Plain-language guidance on regional center services, social recreation, participant direction, and service access.",
+      "tags": [
+        "regional center rights",
+        "social recreation",
+        "participant-directed"
+      ],
+      "max_pages": 8,
+      "include": [
+        "regionalcenter",
+        "services",
+        "social",
+        "recreation"
+      ]
+    },
+    {
+      "id": "scdd-san-diego",
+      "title": "San Diego and Imperial Regional Office",
+      "organization": "California State Council on Developmental Disabilities",
+      "category": "Rights & Advocacy",
+      "url": "https://scdd.ca.gov/sandiego/",
+      "description": "Local trainings, self-advocacy events, policy information, and disability resources for San Diego and Imperial Counties.",
+      "tags": [
+        "San Diego",
+        "self-advocacy",
+        "training",
+        "public participation"
+      ],
+      "max_pages": 6,
+      "include": [
+        "sandiego",
+        "events",
+        "training"
+      ]
+    },
+    {
+      "id": "scdd-sdp-orientation",
+      "title": "Statewide SDP Orientation",
+      "organization": "California State Council on Developmental Disabilities",
+      "category": "Self-Determination",
+      "url": "https://scdd.ca.gov/sdp-orientation/",
+      "description": "The approved statewide two-part Self-Determination Program orientation and registration information.",
+      "tags": [
+        "SDP orientation",
+        "registration",
+        "certificate"
+      ],
+      "max_pages": 5,
+      "include": [
+        "sdp",
+        "orientation"
+      ]
+    },
+    {
+      "id": "drc-rula-living",
+      "title": "Rights Under the Lanterman Act: Community Living",
+      "organization": "Disability Rights California",
+      "category": "Rights & Advocacy",
+      "url": "https://rula.disabilityrightsca.org/rula-book/chapter-7-community-living-arrangements-for-adults/7-3-what-kinds-of-regional-center-services-can-help-me-live-independently-in-a-home-i-own-or-rent/",
+      "description": "Rights-focused explanation of ILS, SLS, and regional center supports for living in a home a person owns or rents.",
+      "tags": [
+        "RULA",
+        "Lanterman Act",
+        "community living",
+        "ILS",
+        "SLS"
+      ],
+      "max_pages": 7,
+      "include": [
+        "chapter-7",
+        "community-living",
+        "independent"
+      ]
+    },
+    {
+      "id": "drc-home-community",
+      "title": "Medi-Cal Programs for Living at Home",
+      "organization": "Disability Rights California",
+      "category": "Health & Home Support",
+      "url": "https://www.disabilityrightsca.org/publications/medi-cal-programs-to-help-you-stay-in-your-own-home-or-leave-a-nursing-home",
+      "description": "Home and community-based Medi-Cal programs, IHSS, waivers, and Self-Determination information.",
+      "tags": [
+        "Medi-Cal",
+        "IHSS",
+        "home and community based services",
+        "waiver"
+      ],
+      "max_pages": 5,
+      "include": [
+        "medi-cal",
+        "home",
+        "community"
+      ]
+    },
+    {
+      "id": "dor-employment",
+      "title": "Employment Services",
+      "organization": "California Department of Rehabilitation",
+      "category": "Employment",
+      "url": "https://www.dor.ca.gov/Home/EmploymentServices",
+      "description": "Vocational rehabilitation, counseling, job readiness, placement, assistive technology, supported employment, and self-employment services.",
+      "tags": [
+        "vocational rehabilitation",
+        "job placement",
+        "assistive technology",
+        "employment"
+      ],
+      "max_pages": 8,
+      "include": [
+        "Employment",
+        "Job",
+        "Supported",
+        "SelfEmployment"
+      ]
+    },
+    {
+      "id": "dor-supported-employment",
+      "title": "Supported Employment Program",
+      "organization": "California Department of Rehabilitation",
+      "category": "Employment",
+      "url": "https://dor.ca.gov/Home/SupportedEmploymentProgram",
+      "description": "Job coaching and ongoing support for people with significant disabilities in integrated employment settings.",
+      "tags": [
+        "supported employment",
+        "job coach",
+        "integrated employment"
+      ],
+      "max_pages": 5,
+      "include": [
+        "SupportedEmployment",
+        "Employment"
+      ]
+    },
+    {
+      "id": "dor-job-seeker",
+      "title": "Job Seeker and Consumer Services",
+      "organization": "California Department of Rehabilitation",
+      "category": "Employment",
+      "url": "https://dor.ca.gov/Home/JobSeekerConsumer",
+      "description": "Career assessment, counseling, training, job search, independent living, assistive technology, and benefits-related employment resources.",
+      "tags": [
+        "job seeker",
+        "career counseling",
+        "training",
+        "assistive technology"
+      ],
+      "max_pages": 6,
+      "include": [
+        "JobSeeker",
+        "Employment",
+        "Training"
+      ]
+    },
+    {
+      "id": "dor-independent-living",
+      "title": "Independent Living Centers",
+      "organization": "California Department of Rehabilitation",
+      "category": "Supported & Independent Living",
+      "url": "https://dor.ca.gov/Home/IndependentLiving",
+      "description": "Independent Living Center services including peer support, advocacy, transportation training, assistive technology, and skills development.",
+      "tags": [
+        "independent living center",
+        "peer support",
+        "advocacy",
+        "skills"
+      ],
+      "max_pages": 6,
+      "include": [
+        "IndependentLiving"
+      ]
+    },
+    {
+      "id": "options-programs",
+      "title": "Programs for Adults with I/DD",
+      "organization": "Options For All",
+      "category": "Community Programs",
+      "url": "https://optionsforall.org/our-programs/",
+      "description": "Employment, film and media, tailored day, independent and supported living, behavioral support, and community engagement programs.",
+      "tags": [
+        "employment",
+        "film and media",
+        "tailored day",
+        "community engagement"
+      ],
+      "max_pages": 10,
+      "include": [
+        "program",
+        "employment",
+        "living",
+        "community",
+        "film",
+        "tailored"
+      ]
+    },
+    {
+      "id": "options-contact",
+      "title": "Options For All Program Contacts",
+      "organization": "Options For All",
+      "category": "Community Programs",
+      "url": "https://optionsforall.org/contact-us/",
+      "description": "Program-specific contacts for community engagement, independent living, tailored day, supported employment, and film and media.",
+      "tags": [
+        "program contacts",
+        "referral",
+        "San Diego"
+      ],
+      "max_pages": 3,
+      "include": [
+        "contact",
+        "program"
+      ]
+    },
+    {
+      "id": "tmi-supported-living",
+      "title": "Supported Living Services",
+      "organization": "Toward Maximum Independence",
+      "category": "Supported & Independent Living",
+      "url": "https://www.tmi-inc.org/client-services/community-living-services/supported-living",
+      "description": "Housing search, budgeting, health, medication, household safety, personal attendants, community access, advocacy, parenting, and relationship support.",
+      "tags": [
+        "supported living",
+        "housing",
+        "budgeting",
+        "attendants",
+        "community access"
+      ],
+      "max_pages": 8,
+      "include": [
+        "supported-living",
+        "community-living",
+        "independent-living"
+      ]
+    },
+    {
+      "id": "tmi-tailored-day",
+      "title": "Tailored Day Services",
+      "organization": "Toward Maximum Independence",
+      "category": "Community Programs",
+      "url": "https://www.tmi-inc.org/client-services/tailored-day-services",
+      "description": "One-to-one self-directed day services supporting employment, volunteering, post-secondary education, recreation, mobility, and microenterprise.",
+      "tags": [
+        "tailored day",
+        "employment",
+        "volunteer",
+        "education",
+        "microenterprise"
+      ],
+      "max_pages": 7,
+      "include": [
+        "tailored-day",
+        "employment",
+        "client-services"
+      ]
+    },
+    {
+      "id": "tmi-escondido",
+      "title": "North County Programs",
+      "organization": "Toward Maximum Independence",
+      "category": "Community Programs",
+      "url": "https://www.tmi-inc.org/contact/escondido-office",
+      "description": "North County employment, community integration, supported living, and independent living services.",
+      "tags": [
+        "North County",
+        "employment",
+        "community living",
+        "San Diego"
+      ],
+      "max_pages": 6,
+      "include": [
+        "escondido",
+        "employment",
+        "community-living"
+      ]
+    },
+    {
+      "id": "cis-services",
+      "title": "Community Interface Services",
+      "organization": "Community Interface Services",
+      "category": "Community Programs",
+      "url": "https://www.communityinterfaceservices.org/services",
+      "description": "Employment, benefits counseling, tailored day, paid internships, independent and supported living, family support, community exploration, transportation, rental assistance, and financial management.",
+      "tags": [
+        "employment",
+        "benefits counseling",
+        "housing",
+        "FMS",
+        "community building"
+      ],
+      "max_pages": 12,
+      "include": [
+        "services",
+        "employment",
+        "community",
+        "financial",
+        "living",
+        "housing",
+        "rental",
+        "ssa"
+      ]
+    },
+    {
+      "id": "cis-program-evaluations",
+      "title": "Program Evaluations and Outcomes",
+      "organization": "Community Interface Services",
+      "category": "Provider Operations",
+      "url": "https://www.communityinterfaceservices.org/prog-evals",
+      "description": "Program designs, annual evaluations, outcome reporting, and service quality information across supported living, employment, independent living, and family support.",
+      "tags": [
+        "program evaluation",
+        "outcomes",
+        "quality",
+        "provider operations"
+      ],
+      "max_pages": 5,
+      "include": [
+        "prog-evals",
+        "program"
+      ]
+    },
+    {
+      "id": "cis-financial",
+      "title": "Financial Management Services",
+      "organization": "Community Interface Services",
+      "category": "Benefits & Financial",
+      "url": "https://www.communityinterfaceservices.org/financial-mgmt-services",
+      "description": "Financial management, rental assistance, transportation vouchers, representative payee, equipment loans, paid internships, and SDP supports.",
+      "tags": [
+        "FMS",
+        "rental assistance",
+        "transportation voucher",
+        "representative payee"
+      ],
+      "max_pages": 7,
+      "include": [
+        "financial",
+        "rental",
+        "transportation",
+        "paid-internship"
+      ]
+    },
+    {
+      "id": "cis-ssa",
+      "title": "Social Security and Benefits Services",
+      "organization": "Community Interface Services",
+      "category": "Benefits & Financial",
+      "url": "https://www.communityinterfaceservices.org/ssa",
+      "description": "Benefits, representative payee, work incentives, financial management, and related supports for people with developmental disabilities.",
+      "tags": [
+        "Social Security",
+        "benefits",
+        "representative payee",
+        "work incentives"
+      ],
+      "max_pages": 6,
+      "include": [
+        "ssa",
+        "benefits",
+        "financial"
+      ]
+    },
+    {
+      "id": "pwi-employment",
+      "title": "Employment Opportunities for Adults with Disabilities",
+      "organization": "Partnerships With Industry",
+      "category": "Employment",
+      "url": "https://www.pwiworks.org/",
+      "description": "Job development, placement, employer partnerships, outsourcing, employee leasing, and direct hire opportunities in San Diego County.",
+      "tags": [
+        "employment",
+        "job placement",
+        "business partnerships",
+        "direct hire"
+      ],
+      "max_pages": 10,
+      "include": [
+        "client",
+        "employment",
+        "getting-started",
+        "options",
+        "business"
+      ]
+    },
+    {
+      "id": "arc-san-diego",
+      "title": "The Arc of San Diego",
+      "organization": "The Arc of San Diego",
+      "category": "Community Programs",
+      "url": "https://www.arc-sd.com/",
+      "description": "Comprehensive services supporting children and adults with disabilities through day, employment, residential, and community programs across San Diego County.",
+      "tags": [
+        "adult day",
+        "employment",
+        "residential",
+        "community",
+        "San Diego"
+      ],
+      "max_pages": 10,
+      "include": [
+        "services",
+        "programs",
+        "employment",
+        "residential",
+        "locations"
+      ]
+    },
+    {
+      "id": "ati-programs",
+      "title": "Programs and Services",
+      "organization": "Access to Independence",
+      "category": "Supported & Independent Living",
+      "url": "https://accesstoindependence.org/programs-and-services/",
+      "description": "Independent living skills, advocacy, peer support, benefits counseling, transition services, assistive technology, home safety, and community participation.",
+      "tags": [
+        "independent living",
+        "benefits counseling",
+        "assistive technology",
+        "peer support"
+      ],
+      "max_pages": 12,
+      "include": [
+        "program",
+        "service",
+        "benefit",
+        "housing",
+        "transition",
+        "assistive"
+      ]
+    },
+    {
+      "id": "ati-san-diego",
+      "title": "San Diego Independent Living Center",
+      "organization": "Access to Independence",
+      "category": "Community Resources",
+      "url": "https://accesstoindependence.org/san-diego/",
+      "description": "San Diego location, local programs, youth transition, independent living, housing and disability support resources.",
+      "tags": [
+        "San Diego",
+        "independent living center",
+        "transition",
+        "housing"
+      ],
+      "max_pages": 6,
+      "include": [
+        "san-diego",
+        "program"
+      ]
+    },
+    {
+      "id": "efrc-programs",
+      "title": "Family Navigation and Training",
+      "organization": "Exceptional Family Resource Center",
+      "category": "Family Support",
+      "url": "https://efrconline.org/programs-services/",
+      "description": "One-to-one navigation, disability benefits, regional center, special education, adult transition, peer support, workshops, conferences, and family training.",
+      "tags": [
+        "family navigation",
+        "peer support",
+        "adult transition",
+        "regional center"
+      ],
+      "max_pages": 10,
+      "include": [
+        "program",
+        "services",
+        "adult",
+        "transition",
+        "training",
+        "workshop"
+      ]
+    },
+    {
+      "id": "efrc-contact",
+      "title": "Family Resource Appointments",
+      "organization": "Exceptional Family Resource Center",
+      "category": "Family Support",
+      "url": "https://efrconline.org/contact-us/",
+      "description": "Appointments for families and professionals seeking help with regional center, SSI, IHSS, Medi-Cal waivers, special education, and disability resources.",
+      "tags": [
+        "appointments",
+        "SSI",
+        "IHSS",
+        "Medi-Cal",
+        "family support"
+      ],
+      "max_pages": 3,
+      "include": [
+        "contact",
+        "program"
+      ]
+    },
+    {
+      "id": "sd-therapeutic-recreation",
+      "title": "Therapeutic Recreation Services",
+      "organization": "City of San Diego Parks and Recreation",
+      "category": "Recreation & Community",
+      "url": "https://www.sandiego.gov/park-and-recreation/activities/trs",
+      "description": "Adaptive sports, recreation, leisure, outreach, inclusion aides, volunteer opportunities, and beach accessibility for children and adults with disabilities.",
+      "tags": [
+        "adaptive recreation",
+        "inclusion aides",
+        "sports",
+        "volunteer",
+        "beach access"
+      ],
+      "max_pages": 12,
+      "include": [
+        "trs",
+        "therapeutic",
+        "beach",
+        "volunteer",
+        "adaptive"
+      ]
+    },
+    {
+      "id": "sd-programs-events",
+      "title": "Programs and Events",
+      "organization": "City of San Diego Parks and Recreation",
+      "category": "Recreation & Community",
+      "url": "https://www.sandiego.gov/park-and-recreation/activities",
+      "description": "City recreation centers, programs, sports, nature activities, volunteer opportunities, and therapeutic recreation.",
+      "tags": [
+        "recreation centers",
+        "activities",
+        "volunteer",
+        "sports"
+      ],
+      "max_pages": 10,
+      "include": [
+        "activities",
+        "programs",
+        "volunteer",
+        "sports",
+        "nature"
+      ]
+    },
+    {
+      "id": "sd-beach-wheelchair",
+      "title": "Beach Wheelchair Program",
+      "organization": "City of San Diego Parks and Recreation",
+      "category": "Recreation & Community",
+      "url": "https://www.sandiego.gov/park-and-recreation/activities/trs/beachwheelchair",
+      "description": "Beach wheelchair access and mobility support at San Diego beaches.",
+      "tags": [
+        "beach wheelchair",
+        "mobility",
+        "accessibility"
+      ],
+      "max_pages": 4,
+      "include": [
+        "beachwheelchair",
+        "beach-access"
+      ]
+    },
+    {
+      "id": "sd-volunteer",
+      "title": "Parks Volunteer Projects and Events",
+      "organization": "City of San Diego Parks and Recreation",
+      "category": "Volunteer & Community",
+      "url": "https://www.sandiego.gov/park-and-recreation/general-info/employment/volunteer/volproje",
+      "description": "Year-round volunteer opportunities in recreation, therapeutic recreation, community events, parks, office projects, and special events.",
+      "tags": [
+        "volunteer",
+        "community events",
+        "therapeutic recreation",
+        "parks"
+      ],
+      "max_pages": 8,
+      "include": [
+        "volunteer",
+        "intern",
+        "employment"
+      ]
+    },
+    {
+      "id": "sd-county-ais",
+      "title": "Aging and Independence Services",
+      "organization": "County of San Diego",
+      "category": "Community Resources",
+      "url": "https://www.sandiegocounty.gov/content/sdc/hhsa/programs/ais/Services.html",
+      "description": "County services and referrals for persons with disabilities, caregivers, older adults, benefits, transportation, health, and independent living.",
+      "tags": [
+        "county services",
+        "disability",
+        "caregivers",
+        "information and assistance"
+      ],
+      "max_pages": 10,
+      "include": [
+        "ais",
+        "Services",
+        "Persons-Living-with-Disabilities",
+        "Older-Adults"
+      ]
+    },
+    {
+      "id": "mts-access",
+      "title": "MTS Access Paratransit",
+      "organization": "San Diego Metropolitan Transit System",
+      "category": "Transportation",
+      "url": "https://www.sdmts.com/transit-services/mts-access-paratransit",
+      "description": "ADA complementary paratransit eligibility, booking, service area, fares, rider guidance, and contact information.",
+      "tags": [
+        "paratransit",
+        "ADA",
+        "mobility",
+        "MTS Access"
+      ],
+      "max_pages": 10,
+      "include": [
+        "mts-access",
+        "paratransit",
+        "access-rider"
+      ]
+    },
+    {
+      "id": "mts-reduced-fare",
+      "title": "Reduced Fares",
+      "organization": "San Diego Metropolitan Transit System",
+      "category": "Transportation",
+      "url": "https://www.sdmts.com/fares/reduced-fares",
+      "description": "Reduced-fare eligibility, accepted disability documentation, PRONTO cards, applications, and fare information.",
+      "tags": [
+        "reduced fare",
+        "PRONTO",
+        "disability ID",
+        "transit"
+      ],
+      "max_pages": 6,
+      "include": [
+        "reduced-fares",
+        "fare",
+        "pronto"
+      ]
+    },
+    {
+      "id": "mts-access-apply",
+      "title": "Apply for MTS Access",
+      "organization": "San Diego Metropolitan Transit System",
+      "category": "Transportation",
+      "url": "https://www.sdmts.com/transit-services/mts-access-paratransit/want-be-access-rider",
+      "description": "ADA paratransit certification application, medical provider form, assessment, and appeals.",
+      "tags": [
+        "paratransit application",
+        "ADA certification",
+        "assessment"
+      ],
+      "max_pages": 5,
+      "include": [
+        "want-be-access-rider",
+        "eligibility",
+        "application"
+      ]
+    },
+    {
+      "id": "nctd-lift",
+      "title": "LIFT Paratransit",
+      "organization": "North County Transit District",
+      "category": "Transportation",
+      "url": "https://gonctd.com/services/lift-paratransit/",
+      "description": "North County ADA complementary paratransit service, rider assistance, reservations, accessibility, and service area.",
+      "tags": [
+        "LIFT",
+        "paratransit",
+        "North County",
+        "ADA"
+      ],
+      "max_pages": 8,
+      "include": [
+        "lift",
+        "accessibility",
+        "paratransit"
+      ]
+    },
+    {
+      "id": "nctd-lift-eligibility",
+      "title": "LIFT Eligibility and Application",
+      "organization": "North County Transit District",
+      "category": "Transportation",
+      "url": "https://gonctd.com/accessibility/lift-eligibility/",
+      "description": "Eligibility criteria, certification, application, and provider forms for NCTD LIFT paratransit.",
+      "tags": [
+        "LIFT eligibility",
+        "certification",
+        "application"
+      ],
+      "max_pages": 6,
+      "include": [
+        "lift-eligibility",
+        "apply-for-lift"
+      ]
+    },
+    {
+      "id": "ihss-san-diego",
+      "title": "In-Home Supportive Services",
+      "organization": "County of San Diego",
+      "category": "Benefits & Financial",
+      "url": "https://www.sandiegocounty.gov/content/sdc/hhsa/programs/ais/Services/In-Home-Supportive-Services/",
+      "description": "IHSS eligibility, application, and support with bathing, grooming, dressing, cleaning, shopping, laundry, and meal preparation.",
+      "tags": [
+        "IHSS",
+        "Medi-Cal",
+        "personal care",
+        "home support"
+      ],
+      "max_pages": 7,
+      "include": [
+        "In-Home-Supportive-Services",
+        "IHSS"
+      ]
+    },
+    {
+      "id": "ssa-ssi",
+      "title": "Supplemental Security Income",
+      "organization": "Social Security Administration",
+      "category": "Benefits & Financial",
+      "url": "https://www.ssa.gov/ssi",
+      "description": "SSI eligibility, payments, reporting, and related programs for people with disabilities and limited income or resources.",
+      "tags": [
+        "SSI",
+        "disability benefits",
+        "income",
+        "resources"
+      ],
+      "max_pages": 8,
+      "include": [
+        "ssi",
+        "apply",
+        "amount",
+        "report"
+      ]
+    },
+    {
+      "id": "ssa-work-incentives",
+      "title": "SSI Work Incentives",
+      "organization": "Social Security Administration",
+      "category": "Employment",
+      "url": "https://www.ssa.gov/ssi/text-work-ussi.htm",
+      "description": "Earned income exclusions, IRWE, PASS, Ticket to Work, WIPA, Medicaid while working, and expedited reinstatement.",
+      "tags": [
+        "work incentives",
+        "IRWE",
+        "PASS",
+        "Ticket to Work",
+        "WIPA"
+      ],
+      "max_pages": 8,
+      "include": [
+        "work",
+        "redbook",
+        "disabilityresearch",
+        "ssi"
+      ]
+    },
+    {
+      "id": "ssa-wipa",
+      "title": "Work Incentives Planning and Assistance",
+      "organization": "Social Security Administration",
+      "category": "Employment",
+      "url": "https://www.ssa.gov/work/WIPA.html",
+      "description": "Individualized counseling about how employment affects SSI, SSDI, health insurance, and available work supports.",
+      "tags": [
+        "WIPA",
+        "benefits counseling",
+        "SSI",
+        "SSDI",
+        "employment"
+      ],
+      "max_pages": 5,
+      "include": [
+        "WIPA",
+        "work"
+      ]
+    },
+    {
+      "id": "ssa-red-book",
+      "title": "Red Book Work Incentives Guide",
+      "organization": "Social Security Administration",
+      "category": "Employment",
+      "url": "https://www.ssa.gov/redbook/",
+      "description": "Reference guide to SSDI and SSI work incentives and employment supports for people with disabilities and professionals.",
+      "tags": [
+        "Red Book",
+        "SSDI",
+        "SSI",
+        "employment supports"
+      ],
+      "max_pages": 8,
+      "include": [
+        "redbook",
+        "employment-support"
+      ]
+    },
+    {
+      "id": "calable",
+      "title": "CalABLE Disability Savings",
+      "organization": "California State Treasurer",
+      "category": "Benefits & Financial",
+      "url": "https://calable.ca.gov/",
+      "description": "ABLE savings accounts, eligibility, qualified expenses, work contributions, authorized representatives, and protection of public-benefit eligibility.",
+      "tags": [
+        "CalABLE",
+        "ABLE account",
+        "savings",
+        "public benefits"
+      ],
+      "max_pages": 10,
+      "include": [
+        "eligibility",
+        "how-it-works",
+        "benefits",
+        "qualified",
+        "work",
+        "alr",
+        "faq"
+      ]
+    },
+    {
+      "id": "benefitscal",
+      "title": "BenefitsCal",
+      "organization": "State of California",
+      "category": "Benefits & Financial",
+      "url": "https://benefitscal.com/",
+      "description": "California portal for applying for and managing food, medical, and cash assistance benefits.",
+      "tags": [
+        "CalFresh",
+        "Medi-Cal",
+        "cash aid",
+        "benefits application"
+      ],
+      "max_pages": 4,
+      "include": [
+        "apply",
+        "benefits",
+        "help"
+      ]
+    },
+    {
+      "id": "two-one-one",
+      "title": "2-1-1 San Diego",
+      "organization": "211 San Diego",
+      "category": "Community Resources",
+      "url": "https://211sandiego.org/",
+      "description": "Local information and referral network for housing, food, health, transportation, disability, employment, legal, and community services.",
+      "tags": [
+        "211",
+        "referral",
+        "housing",
+        "food",
+        "health",
+        "transportation"
+      ],
+      "max_pages": 10,
+      "include": [
+        "resources",
+        "search",
+        "service",
+        "disability",
+        "housing",
+        "transportation"
+      ]
+    },
+    {
+      "id": "sdhc-rental-assistance",
+      "title": "Rental Assistance",
+      "organization": "San Diego Housing Commission",
+      "category": "Housing",
+      "url": "https://sdhc.org/housing-opportunities/help-with-your-rent/",
+      "description": "Rental assistance, Housing Choice Voucher, participant information, affordable housing, and landlord resources in the City of San Diego.",
+      "tags": [
+        "rental assistance",
+        "Housing Choice Voucher",
+        "Section 8",
+        "affordable housing"
+      ],
+      "max_pages": 12,
+      "include": [
+        "help-with-your-rent",
+        "rental",
+        "voucher",
+        "housing-opportunities"
+      ]
+    },
+    {
+      "id": "cis-rental-assistance",
+      "title": "Rental Assistance and Housing Supports",
+      "organization": "Community Interface Services",
+      "category": "Housing",
+      "url": "https://www.communityinterfaceservices.org/financial-mgmt-services",
+      "description": "Rental subsidy, financial management, housing-related supports, and services available in the SDRC catchment area.",
+      "tags": [
+        "rental subsidy",
+        "housing",
+        "financial management",
+        "SDRC"
+      ],
+      "max_pages": 5,
+      "include": [
+        "financial",
+        "rental",
+        "housing"
+      ]
+    },
+    {
+      "id": "hud-california-renting",
+      "title": "Rental Help in California",
+      "organization": "U.S. Department of Housing and Urban Development",
+      "category": "Housing",
+      "url": "https://www.hud.gov/states/california/renting",
+      "description": "Federal rental assistance, housing counseling, subsidized housing, tenant rights, and California housing resources.",
+      "tags": [
+        "HUD",
+        "rental assistance",
+        "subsidized housing",
+        "tenant rights"
+      ],
+      "max_pages": 7,
+      "include": [
+        "california",
+        "renting",
+        "rental",
+        "housing"
+      ]
+    },
+    {
+      "id": "listos-california",
+      "title": "Disaster Readiness",
+      "organization": "Listos California",
+      "category": "Safety & Emergency",
+      "url": "https://www.listoscalifornia.org/",
+      "description": "Plain-language emergency preparedness, alerts, disaster planning, and resources for Californians.",
+      "tags": [
+        "emergency plan",
+        "disaster",
+        "alerts",
+        "preparedness"
+      ],
+      "max_pages": 8,
+      "include": [
+        "prepare",
+        "resources",
+        "alerts",
+        "disaster"
+      ]
+    }
+  ]
+}
